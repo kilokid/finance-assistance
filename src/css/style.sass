@@ -81,10 +81,10 @@ ul
 
 
 .main
-    margin-top: 20%
+    margin-top: 15%
     padding-bottom: 15px
     display: flex
-    position: relative
+    z-index: 999
     &__title
         font-weight: 800
         font-size: 58px
@@ -106,6 +106,18 @@ ul
         margin-right: 10px
 
 .cerclebg
-    background-image: url(src/img/circle.png)
+    position: absolute
+    background-image: url('../src/img/circle.png')
+    background-repeat: no-repeat
+    width: 209px
+    height: 285px
+    top: 85px
 .phonebg
-    background-image: url(src/img/phonebg.png)
+    position: absolute
+    background-image: url('../src/img/phonebg.png')
+    width: 689px
+    height: 644px
+    right: 100px
+    top: 90px
+    background-repeat: no-repeat
+    z-index: -999
