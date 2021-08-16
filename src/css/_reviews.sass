@@ -1,4 +1,5 @@
 .reviews
+    margin-bottom: 112px
     &__title
         margin: 112px 0 10px 0
     &__discription
@@ -7,6 +8,36 @@
     &__cards
         display: flex
         justify-content: space-between
+        grid-gap: 30px
     &__card
         width: 327px
-        height: 244px
+        height: 180px
+        padding: 30px 40px 30px 35px
+        &-text
+            font-weight: 600
+            font-size: 14px
+            line-height: 24px
+            letter-spacing: 0.2px
+            color: $grey
+            margin-bottom: 20px
+            max-width: 280px
+        &-author
+            display: flex
+            &-avatar
+                margin-right: 15px
+            &-description
+                display: flex
+                flex-direction: column
+            &-name
+                font-weight: 600
+                font-size: 14px
+                line-height: 24px
+                letter-spacing: 0.2px
+                color: $blue
+            &-job
+                font-weight: 600
+                font-size: 14px
+                line-height: 24px
+                letter-spacing: 0.2px
+    &__rating
+        margin-bottom: 20px
