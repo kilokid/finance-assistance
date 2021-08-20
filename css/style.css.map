@@ -13,7 +13,8 @@
         "../src/sass/blocks/_main-head.sass",
         "../src/sass/blocks/_strategy.sass",
         "../src/sass/blocks/_reviews.sass",
-        "../src/sass/blocks/_news.sass"
+        "../src/sass/blocks/_news.sass",
+        "../src/sass/blocks/_pricing.scss"
     ],
     "names": [],
     "file": "style.css"
