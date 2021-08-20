@@ -23,7 +23,12 @@
         margin-top: 96px
         margin-bottom: 112px
 
-        @media (max-width: 762px)
+        @media (max-width: 1020px)
+            grid-gap: 20px
+            justify-content: space-around
+            flex-wrap: wrap 
+
+        @media (max-width: 768px)
             flex-direction: column
 
     &__card
@@ -32,10 +37,11 @@
         display: flex
         flex-direction: column
         justify-content: flex-end
+        padding: 20px
 
         @media (max-width: 762px)
             max-width: 331px
-            height: 452px
+            min-height: 452px
 
     &__bg  
         background-repeat: no-repeat
@@ -47,23 +53,25 @@
             background-image: url(../img/news-bg-3.jpg)
         &_4
             background-image: url(../img/news-bg-4.jpg)
+    
     &__topic
         font-weight: 600
         font-size: 14px
         line-height: 24px
         letter-spacing: 0.2px
         color: $white
+        margin-bottom: 15px
     &__subtopic
         font-weight: 500
         font-size: 20px
         line-height: 30px
         letter-spacing: 0.2px
         color: $white
-        margin-top: 15px
+        margin-bottom: 15px
     &__button
-        max-width: 96px
+        display: block
+        max-width: 168px
         padding: 10px 36px
-        margin-top: 15px
 
 
 
