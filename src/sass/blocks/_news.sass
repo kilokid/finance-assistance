@@ -1,0 +1,79 @@
+.news
+    &__title
+        padding-top: 112px
+        margin-bottom: 10px
+
+        @media (max-width: 512px) 
+            max-width: 301px
+            margin: 0 auto
+
+    &__description
+        width: 470px
+        margin: 0 auto
+        @media (max-width: 512px) 
+            max-width: 298px
+
+        @media (max-width: 320px) 
+            width: auto
+    &__cards
+        display: flex
+        justify-content: space-between
+        align-items: center  
+        grid-gap: 30px
+        margin-top: 96px
+        margin-bottom: 112px
+
+        @media (max-width: 762px)
+            flex-direction: column
+
+    &__card
+        width: 331px
+        height: 452px
+
+        @media (max-width: 762px)
+            max-width: 331px
+            height: 452px
+
+    &__bg
+        width: 100%
+        height: 100%
+        background-repeat: no-repeat
+        &_1
+            background-image: url(../src/img/news-bg-1.jpg)
+        &_2
+            background-image: url(../src/img/news-bg-2.jpg)
+        &_3
+            background-image: url(../src/img/news-bg-3.jpg)
+        &_4
+            background-image: url(../src/img/news-bg-4.jpg)
+    &__content
+        display: flex
+        flex-direction: column-reverse
+        // Вопрос по падингу !
+        padding: 20px
+    &__topic
+        font-weight: 600
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.2px
+        color: $white
+    &__subtopic
+        font-weight: 500
+        font-size: 20px
+        line-height: 30px
+        letter-spacing: 0.2px
+        color: $white
+        margin-top: 15px
+    &__button
+        width: calc(195px - (36px + 36px))
+        padding: 10px 36px
+        margin-top: 15px
+        margin-bottom: 45px
+
+
+
+
+    
+
+
+    
