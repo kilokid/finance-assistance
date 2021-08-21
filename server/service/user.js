@@ -5,12 +5,13 @@ import { userModel } from '../models/user.js';
 import { EmailService } from './email.js';
 import { TokenService } from './token.js';
 import { UserDTO } from '../dto/user.js';
+import { ApiError } from '../exceptions/api-error.js';
 
 export class UserService {
   static async registration(email, password) {
     const candidate = await userModel.findOne({ email });
     if (candidate) {
-      throw new Error(`Пользователь с email ${email} уже существует!`);
+      throw ApiError.BadRequest(`Пользователь с email ${email} уже существует!`);
     }
 
     const hashPassword = await bcrypt.hash(password, 3);
@@ -31,7 +32,7 @@ export class UserService {
   static async activate(activationLink) {
     const user = await userModel.findOne({ activationLink });
     if (!user) {
-      throw new Error('Некорректная ссылка активации');
+      throw ApiError.BadRequest('Некорректная ссылка активации');
     }
 
     user.isActivated = true;

@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 
+import { error } from './middlewares/error.js';
+
 import { router } from './router/index.js';
 
 dotenv.config();
@@ -15,6 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 app.use('/api', router);
+app.use(error);
 
 const start = async () => {
   if (!process.env.DATABASE_URL) {
