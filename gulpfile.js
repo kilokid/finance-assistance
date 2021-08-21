@@ -82,7 +82,7 @@ export const server = (done) => {
 export const watcher = () => {
   gulp.watch('src/sass/**/*.sass', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*.js', gulp.series(js));
+  gulp.watch('src/js/**/*.js', gulp.series(js));
 };
 
 export default gulp.series(
