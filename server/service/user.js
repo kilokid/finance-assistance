@@ -27,4 +27,14 @@ export class UserService {
       user: userDto,
     }
   }
+
+  static async activate(activationLink) {
+    const user = await userModel.findOne({ activationLink });
+    if (!user) {
+      throw new Error('Некорректная ссылка активации');
+    }
+
+    user.isActivated = true;
+    await user.save();
+  }
 }
