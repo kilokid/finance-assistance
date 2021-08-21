@@ -10,6 +10,7 @@ const webpackConfig = {
   output: {
     filename: '[name].min.js',
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
