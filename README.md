@@ -16,4 +16,7 @@ https://kilokid.github.io/finance-assistance/
 Сборка в продакшн:\
 `npm run build`
 
+Деплой на Github Pages:\
+`npm run deploy`
+
 ---
