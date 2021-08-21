@@ -1,21 +1,15 @@
 .news
   padding-top: 112px
+
   &__title
     margin-bottom: 10px
 
     @media (max-width: 768px)
-        display: none
+      padding: 0 100px
+      margin-bottom: 30px
 
-    &_disable
-      display: none
-
-      @media (max-width: 768px)
-        display: block
-        padding: 0 100px
-        margin-bottom: 30px
-
-      @media (max-width: 512px)
-        padding: 0 25px
+    @media (max-width: 512px)
+      padding: 0 25px
 
   &__description
     width: 470px
@@ -59,6 +53,7 @@
     flex-direction: column
     justify-content: flex-end
     padding: 20px
+    overflow: hidden
 
     @media (max-width: 762px)
       max-width: 331px
@@ -68,7 +63,9 @@
       max-width: 290px
 
   &__bg
+    position: relative
     background-repeat: no-repeat
+    z-index: 1
 
     &_1
       background-image: url("../img/news-bg-1.jpg")
@@ -81,6 +78,16 @@
 
     &_4
       background-image: url("../img/news-bg-4.jpg")
+
+  &__bg::before
+    content: ''
+    position: absolute
+    z-index: -1
+    left: 0px
+    right: 0px
+    top: 0px
+    bottom: 0px
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%)
 
   &__topic
     margin-bottom: 15px
@@ -98,7 +105,12 @@
     letter-spacing: 0.2px
     color: $white
 
+    @media (max-width: 711px)
+      font-weight: 700
+      font-size: 20px
+      line-height: 32px
+
   &__button
-    display: block
+    display: inline-block
     max-width: 168px
     padding: 10px 36px
