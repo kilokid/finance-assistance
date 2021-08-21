@@ -1,82 +1,104 @@
 .news
-    &__title
-        padding-top: 112px
-        margin-bottom: 10px
+  padding-top: 112px
+  &__title
+    margin-bottom: 10px
 
-        @media (max-width: 512px) 
-            max-width: 301px
-            margin: 0 auto
+    @media (max-width: 768px)
+        display: none
 
-    &__description
-        width: 470px
-        margin: 0 auto
-        @media (max-width: 512px) 
-            max-width: 298px
+    &_disable
+      display: none
 
-        @media (max-width: 320px) 
-            width: auto
-    &__cards
-        display: flex
-        justify-content: space-between
-        align-items: center  
-        grid-gap: 30px
-        margin-top: 96px
-        margin-bottom: 112px
-
-        @media (max-width: 1020px)
-            grid-gap: 20px
-            justify-content: space-around
-            flex-wrap: wrap 
-
-        @media (max-width: 768px)
-            flex-direction: column
-
-    &__card
-        width: 331px
-        min-height: 452px
-        display: flex
-        flex-direction: column
-        justify-content: flex-end
-        padding: 20px
-
-        @media (max-width: 762px)
-            max-width: 331px
-            min-height: 452px
-
-    &__bg  
-        background-repeat: no-repeat
-        &_1
-            background-image: url(../img/news-bg-1.jpg)
-        &_2
-            background-image: url(../img/news-bg-2.jpg)
-        &_3
-            background-image: url(../img/news-bg-3.jpg)
-        &_4
-            background-image: url(../img/news-bg-4.jpg)
-    
-    &__topic
-        font-weight: 600
-        font-size: 14px
-        line-height: 24px
-        letter-spacing: 0.2px
-        color: $white
-        margin-bottom: 15px
-    &__subtopic
-        font-weight: 500
-        font-size: 20px
-        line-height: 30px
-        letter-spacing: 0.2px
-        color: $white
-        margin-bottom: 15px
-    &__button
+      @media (max-width: 768px)
         display: block
-        max-width: 168px
-        padding: 10px 36px
+        padding: 0 100px
+        margin-bottom: 30px
+
+      @media (max-width: 512px)
+        padding: 0 25px
+
+  &__description
+    width: 470px
+    margin: 0 auto
+
+    @media (max-width: 768px)
+      margin-bottom: 60px
+
+    @media (max-width: 512px)
+      max-width: 298px
+
+    @media (max-width: 350px)
+      max-width: 270px
+      padding: 0 20px
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    grid-gap: 30px
+    padding: 0 15px
+    margin-top: 96px
+    margin-bottom: 112px
+    margin: 96px auto 112px auto
+    max-width: 1400px
+
+    @media (max-width: 1212px)
+      grid-gap: 20px
+      justify-content: space-around
+      flex-wrap: wrap
+
+    @media (max-width: 580px)
+      max-width: 580px
+      padding: 0 15px
 
 
+  &__card
+    width: 331px
+    min-height: 452px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding: 20px
 
+    @media (max-width: 762px)
+      max-width: 331px
+      min-height: 452px
 
-    
+    @media (max-width: 580px)
+      max-width: 290px
 
+  &__bg
+    background-repeat: no-repeat
 
-    
+    &_1
+      background-image: url("../img/news-bg-1.jpg")
+
+    &_2
+      background-image: url("../img/news-bg-2.jpg")
+
+    &_3
+      background-image: url("../img/news-bg-3.jpg")
+
+    &_4
+      background-image: url("../img/news-bg-4.jpg")
+
+  &__topic
+    margin-bottom: 15px
+    font-weight: 600
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: 0.2px
+    color: $white
+
+  &__subtopic
+    margin-bottom: 15px
+    font-weight: 500
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.2px
+    color: $white
+
+  &__button
+    display: block
+    max-width: 168px
+    padding: 10px 36px
