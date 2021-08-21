@@ -2,13 +2,16 @@
   padding-top: 112px
   padding-bottom: 141px
 
-  &__header
-    margin: 0 auto
+  &__title
+    margin-bottom: 10px
 
   &__description
     max-width: 470px
     margin: 0 auto
     margin-bottom: 80px
+
+    @media (max-width: 520px)
+      padding: 0 75px
 
   &__button
     margin-bottom: 35px
@@ -18,11 +21,26 @@
     display: flex
     justify-content: space-between
 
+    @media (max-width: 1070px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      grid-gap: 83px
+
   &__card
     position: relative
-    max-width: 270px
+    min-width: 270px
     min-height: 589px
-    padding: 50px 40px
+    padding: 50px 30px
+
+    @media (max-width: 1070px)
+      margin: 0 40px
+      max-width: 300px
+
+    @media (max-width: 350px)
+      max-width: 270px
+      padding: 40px 10px
+      margin: 0 20px
 
     &-rate
       font-weight: 700
@@ -32,6 +50,7 @@
       text-align: center
       color: $dark
       margin-bottom: 35px
+      text-transform: uppercase
 
     &-description
       margin: 0 auto
@@ -95,6 +114,11 @@
       right: 17px
       top: -26px
 
+.wrapper
+  &--flex
+    @media (max-width: 1070px)
+      display: flex
+      flex-direction: column-reverse
 
 
 

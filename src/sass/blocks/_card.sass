@@ -1,7 +1,11 @@
 .card
-    border: 1px solid $light-gray
-    background-color: $white
-    border-radius: 5px
+  border: 1px solid $light-gray
+  background-color: $white
+  border-radius: 5px
 
-    &_border
-      border-radius: 10px
+  @media (max-width: 1070px)
+    border: 1px solid $blue
+
+  &--border
+    border-radius: 10px
+
