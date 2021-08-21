@@ -7,6 +7,16 @@
     display: flex
     justify-content: space-between
     align-items: center
+    padding: 0 40px
+
+    @media (max-width: 930px)
+      flex-direction: column
+
+    @media (max-width: 930px)
+      padding: 0 20px
+
+    @media (max-width: 352px)
+      padding: 0 10px
 
   &__left
     max-width: 439px
@@ -18,12 +28,23 @@
     letter-spacing: 0.2px
     color: $white
 
+    @media (max-width: 930px)
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      text-align: center
+      letter-spacing: 0.1px
+      margin-bottom: 30px
+
   &__description
     font-weight: 500
     font-size: 14px
     line-height: 20px
     letter-spacing: 0.2px
     color: $white
+
+    @media (max-width: 930px)
+      display: none
 
   &__input
     position: relative
@@ -39,6 +60,16 @@
       outline: none
       padding: 15px 20px
       border-radius: 5px 0 0 5px
+      font-weight: normal
+      font-size: 14px
+      letter-spacing: 0.2px
+      color: $grey
+
+      @media (max-width: 472px)
+        width: 190px
+
+      @media (max-width: 352px)
+        width: 170px
 
     &-button
       position: relative
@@ -51,37 +82,6 @@
       cursor: pointer
       color: $white
       background-color: $blue
-
-
-
-
-
-
-
-
-
-
-  // &__input
-  //   position: relative
-  //   border: none
-  //   padding: 15px 20px
-  //   width: 386px
-  //   font-weight: 400
-  //   font-size: 14px
-  //   line-height: 28px
-  //   letter-spacing: 0.2px
-  //   color: $grey
-
-  // &__subscribe
-  //   position: absolute
-  //   right: 2px
-  //   top: 2px
-  //   padding: 13px 22.5px
-  //   background-color: $blue
-  //   font-weight: 400
-  //   font-size: 14px
-  //   line-height: 28px
-  //   text-align: center
-  //   letter-spacing: 0.2px
-  //   color: $white
-  //   cursor: pointer
+      font-size: 14px
+      letter-spacing: 0.2px
+      font-weight: normal
