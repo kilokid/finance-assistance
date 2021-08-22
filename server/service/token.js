@@ -27,4 +27,25 @@ export class TokenService {
   static async removeToken(refreshToken) {
     await tokenModel.deleteOne({ refreshToken });
   }
+
+  static validateAccessToken(token) {
+    try {
+      return jwt.verify(token, process.env.JWT_ACCESS_SECRET);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  static validateRefreshToken(token) {
+    try {
+      return jwt.verify(token, process.env.JWT_REFRESH_SECRET);
+    } catch (err) {
+      return null;
+    }
+  }
+
+  static async findToken(refreshToken) {
+    const tokenData = await tokenModel.findOne({ refreshToken });
+    return tokenData;
+  }
 }
