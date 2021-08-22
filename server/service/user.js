@@ -85,4 +85,9 @@ export class UserService {
       user: userDto,
     }
   }
+
+  static async getAllUsers() {
+    const users = await userModel.find();
+    return users;
+  }
 }
