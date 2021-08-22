@@ -59,4 +59,8 @@ export class UserService {
       user: userDto,
     }
   }
+
+  static async logout(refreshToken) {
+    await TokenService.removeToken(refreshToken);
+  }
 }
