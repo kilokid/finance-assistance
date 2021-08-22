@@ -9,16 +9,14 @@
     align-items: center
     padding: 0 40px
 
-    @media (max-width: 930px)
+    @media (max-width: 980px)
       flex-direction: column
-
-    @media (max-width: 930px)
       padding: 0 20px
 
     @media (max-width: 352px)
       padding: 0 10px
 
-  &__left
+  &__info
     max-width: 439px
 
   &__title
@@ -28,7 +26,7 @@
     letter-spacing: 0.2px
     color: $white
 
-    @media (max-width: 930px)
+    @media (max-width: 980px)
       font-weight: 700
       font-size: 24px
       line-height: 32px
@@ -43,45 +41,47 @@
     letter-spacing: 0.2px
     color: $white
 
-    @media (max-width: 930px)
+    @media (max-width: 980px)
       display: none
 
-  &__input
-    position: relative
-    display: inline-block
+  &__border
+    height: 58px
+    padding: 1px 1px
+    border-radius: 5px
+    background-color: $white
+
+  &__email
+    padding: 20px
+    width: 65%
+    max-width: 270px
+    border: none
+    border-top-left-radius: 5px
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 5px
+    font-weight: normal
     font-size: 14px
-    box-sizing: border-box
-    transition: 0.5s
+    letter-spacing: 0.2px
+    color: $grey
 
-    &-email
-      width: 270px
-      height: 58px
-      border: none
-      outline: none
-      padding: 15px 20px
-      border-radius: 5px 0 0 5px
-      font-weight: normal
-      font-size: 14px
-      letter-spacing: 0.2px
-      color: $grey
+    // @media (max-width: 472px)
+    //   width: 190px
 
-      @media (max-width: 472px)
-        width: 190px
+    // @media (max-width: 352px)
+    //   width: 170px
 
-      @media (max-width: 352px)
-        width: 170px
-
-    &-button
-      position: relative
-      left: -5px
-      border-radius: 0 5px 5px 0
-      width: 117px
-      height: 58px
-      border: none
-      outline: none
-      cursor: pointer
-      color: $white
-      background-color: $blue
-      font-size: 14px
-      letter-spacing: 0.2px
-      font-weight: normal
+  &__button
+    width: 117px
+    padding: 15px 23px
+    border-top-left-radius: 0
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+    border-bottom-left-radius: 0
+    border: none
+    cursor: pointer
+    color: $white
+    background-color: $blue
+    font-size: 14px
+    line-height: 28px
+    letter-spacing: 0.2px
+    font-weight: 400

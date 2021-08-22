@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class="container">
             <div class="header">
                 <span class="header__logo">BrandName</span>
@@ -162,20 +162,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="get-touch">
-          <!-- Не объединяю, тк фон на весь блок, а контент определенной ширины -->
           <div class="container get-touch__content">
-            <div class="get-touch__left">
+            <div class="get-touch__info">
               <h2 class="get-touch__title">Get In Touch</h2>
               <p class="get-touch__description">The gradual accumulation of information about atomic and small-scale behaviour during the first quarter of the 20th</p>
             </div>
-            <div class="get-touch__right">
-              <form action="">
-                <input class="get-touch__input get-touch__input-email" type="text" name="" placeholder="Your Email">
-                <input class="get-touch__input get-touch__input-button" type="submit" name="" value="Subscribe">
-              </form>
-            </div>
+            <form class="get-touch__border">
+              <input class="input get-touch__email" type="email" name="email" placeholder="Your Email" required>
+              <input class="input get-touch__button" type="submit" value="Subscribe" required>
+            </form>
           </div>
         </div>
     </main>
