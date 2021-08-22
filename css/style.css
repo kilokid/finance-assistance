@@ -284,9 +284,6 @@ input::-webkit-input-placeholder {
       .get-touch__content {
         flex-direction: column;
         padding: 0 20px; } }
-    @media (max-width: 352px) {
-      .get-touch__content {
-        padding: 0 10px; } }
   .get-touch__info {
     max-width: 439px; }
   .get-touch__title {
@@ -313,14 +310,16 @@ input::-webkit-input-placeholder {
       .get-touch__description {
         display: none; } }
   .get-touch__border {
-    height: 58px;
-    padding: 1px 1px;
+    display: flex;
+    align-items: center;
+    min-height: 58px;
+    border: 1px solid #E6E6E6;
     border-radius: 5px;
-    background-color: #FFFFFF; }
+    background-color: #F9F9F9; }
   .get-touch__email {
     padding: 20px;
-    width: 65%;
     max-width: 270px;
+    width: 100%;
     border: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 0;
@@ -333,6 +332,7 @@ input::-webkit-input-placeholder {
   .get-touch__button {
     width: 117px;
     padding: 15px 23px;
+    margin-left: 2px;
     border-top-left-radius: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -344,4 +344,5 @@ input::-webkit-input-placeholder {
     font-size: 14px;
     line-height: 28px;
     letter-spacing: 0.2px;
-    font-weight: 400; }
+    font-weight: 400;
+    white-space: pre-wrap; }
