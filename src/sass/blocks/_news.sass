@@ -1,5 +1,6 @@
 .news
   padding-top: 112px
+  padding-bottom: 112px
 
   &__title
     margin-bottom: 10px
@@ -12,8 +13,8 @@
       padding: 0 25px
 
   &__description
+    margin: 0 auto 96px
     width: 470px
-    margin: 0 auto
 
     @media (max-width: 768px)
       margin-bottom: 60px
@@ -29,32 +30,30 @@
     display: flex
     justify-content: space-between
     align-items: center
-    grid-gap: 30px
+    gap: 30px
     padding: 0 15px
-    margin-top: 96px
-    margin-bottom: 112px
-    margin: 96px auto 112px auto
+    margin: 0 auto
     max-width: 1400px
 
     @media (max-width: 1212px)
-      grid-gap: 20px
+      gap: 20px
       justify-content: space-around
       flex-wrap: wrap
 
     @media (max-width: 580px)
       max-width: 580px
-      margin: 60px auto 112px auto
+      margin: 0 auto 112px auto
       padding: 0 15px
 
-
   &__card
+    position: relative
     width: 331px
     min-height: 452px
     display: flex
     flex-direction: column
     justify-content: flex-end
     padding: 20px
-    overflow: hidden
+    z-index: 1
 
     @media (max-width: 762px)
       max-width: 331px
@@ -63,10 +62,18 @@
     @media (max-width: 580px)
       max-width: 290px
 
+  &__card::before
+    content: ''
+    position: absolute
+    left: 0px
+    right: 0px
+    top: 0px
+    bottom: 0px
+    z-index: -1
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%)
+
   &__bg
-    position: relative
     background-repeat: no-repeat
-    z-index: 1
 
     &_1
       background-image: url("../img/news-bg-1.jpg")
@@ -79,16 +86,6 @@
 
     &_4
       background-image: url("../img/news-bg-4.jpg")
-
-  &__bg::before
-    content: ''
-    position: absolute
-    z-index: -1
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%)
 
   &__topic
     margin-bottom: 15px
