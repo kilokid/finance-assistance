@@ -10,8 +10,8 @@ import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import del from 'del';
 import htmlmin from 'gulp-htmlmin';
-import babel from 'gulp-babel';
-import terser from 'gulp-terser';
+
+import { js } from './gulp/js.js';
 
 const sass = gulpSass(nodeSass);
 browserSync.create();
@@ -55,18 +55,6 @@ export const html = () =>
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
 
-// JS
-
-export const js = () =>
-  gulp.src('src/js/**/*.js')
-    .pipe(babel({
-      presets: ['@babel/preset-env']
-    }))
-    .pipe(terser())
-    .pipe(rename({extname: '.min.js'}))
-    .pipe(gulp.dest('build/js'))
-    .pipe(browserSync.stream());
-
 export const build = gulp.series(
   clean,
   copy,
@@ -94,7 +82,7 @@ export const server = (done) => {
 export const watcher = () => {
   gulp.watch('src/sass/**/*.sass', gulp.series('styles'));
   gulp.watch('src/*.html', gulp.series('html'));
-  gulp.watch('src/js/*.js', gulp.series('js'));
+  gulp.watch('src/js/**/*.js', gulp.series(js));
 };
 
 export default gulp.series(
