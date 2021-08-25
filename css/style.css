@@ -326,6 +326,9 @@ ul {
     margin: 0 auto 80px;
     padding: 0 25px;
     text-align: center; }
+    @media (max-width: 414px) {
+      .pricing__description {
+        margin: 0 auto 60px; } }
   .pricing__cards {
     display: flex;
     justify-content: space-between;
