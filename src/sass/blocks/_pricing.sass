@@ -1,141 +1,137 @@
-// .pricing
-//   padding-top: 112px
-//   padding-bottom: 141px
+.pricing
+  padding-top: 112px
+  padding-bottom: 112px
+  font-weight: 600
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.2px
 
-//   &__title
-//     margin-bottom: 10px
+  &__title
+    margin-bottom: 10px
 
-//   @media (max-width: 520px)
-//     font-weight: normal
+  &__description
+    max-width: 470px
+    width: 100%
+    margin: 0 auto 80px
+    padding: 0 25px
+    text-align: center
 
-//   &__description
-//     max-width: 470px
-//     margin: 0 auto
-//     margin-bottom: 80px
+  &__cards
+    display: flex
+    justify-content: space-between
+    flex-flow: wrap
+    gap: 30px
 
-//     @media (max-width: 520px)
-//       padding: 0 75px
+    @media (max-width: 1100px)
+      flex-direction: column
+      align-items: center
 
-//   &__button
-//     margin-bottom: 35px
-//     display: block
+    @media (max-width: 414px)
+      gap: 60px
 
-//   &__cards
-//     display: flex
-//     justify-content: space-between
+  &-card
+    max-width: 327px
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 50px 40px
+    border: 1px solid $light-gray
+    background-color: $white
 
-//     @media (max-width: 1070px)
-//       display: flex
-//       flex-wrap: wrap
-//       justify-content: center
-//       grid-gap: 83px
+    @media (max-width: 414px)
+      padding: 50px 40px
+      margin: 0 15px
+      border: $bg-light
 
-//   &__card
-//     position: relative
-//     min-width: 270px
-//     min-height: 589px
-//     padding: 50px 30px
+    &__rate
+      margin-bottom: 35px
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0.1px
+      color: $dark
 
-//     @media (max-width: 1070px)
-//       margin: 0 40px
-//       max-width: 300px
+    &__chevron
+      position: absolute
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 29px 16px
+      border-radius: 50%
+      background-color: $orange
+      top: -26px
+      right: 16.5px
+      font-weight: 700
+      font-size: 24px
+      line-height: 32px
+      letter-spacing: 0.1px
+      color: $white
 
-//     @media (max-width: 350px)
-//       max-width: 270px
-//       padding: 40px 10px
-//       margin: 0 20px
+    &__description
+      margin-bottom: 35px
+      font-weight: 700
+      font-size: 16px
+      text-align: center
+      letter-spacing: 0.1px
+      color: $grey
 
-//     &-rate
-//       font-weight: 700
-//       font-size: 24px
-//       line-height: 32px
-//       letter-spacing: 0.1px
-//       text-align: center
-//       color: $dark
-//       margin-bottom: 35px
-//       text-transform: uppercase
+    &__price
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      margin-bottom: 35px
+      font-weight: 700
+      font-size: 40px
+      line-height: 57px
+      color: $blue
 
-//     &-description
-//       margin: 0 auto
-//       max-width: 160px
-//       font-weight: 700
-//       font-size: 16px
-//       line-height: 24px
-//       text-align: center
-//       letter-spacing: 0.1px
-//       color: $grey
-//       margin-bottom: 35px
+    &__value
+      justify-self: end
 
-//     &-value
-//       font-weight: bold
-//       font-size: 40px
-//       line-height: 57px
-//       letter-spacing: 0.2px
-//       color: $blue
-//       text-align: center
-
-//     &-subscription
-//       font-weight: bold
-//       font-size: 16px
-//       line-height: 24px
-//       letter-spacing: 0.1px
-//       color: $light-blue
-//       text-align: center
-//       margin-bottom: 45px
-
-//     &-item
-//       display: flex
-//       align-items: center
-//       margin-bottom: 15px
-
-//     &-cheked
-//       margin-right: 10px
-
-//     &-features
-//       font-weight: 600
-//       font-size: 14px
-//       line-height: 24px
-//       letter-spacing: 0.2px
-//       color: $dark
-//       max-width: 205px
-
-//     &-chevron
-//       position: absolute
-//       display: flex
-//       justify-content: center
-//       align-items: center
-//       width: 90px
-//       height: 90px
-//       border-radius: 50%
-//       background-color: $orange
-//       font-weight: bold
-//       font-size: 24px
-//       line-height: 32px
-//       text-align: center
-//       letter-spacing: 0.1px
-//       color: $white
-//       right: 17px
-//       top: -26px
-
-// .wrapper
-//   &--flex
-//     @media (max-width: 1070px)
-//       display: flex
-//       flex-direction: column-reverse
+    // &__currency
 
 
+    &__subscription
+      grid-column-start: 1
+      grid-column-end: 3
+      font-weight: bold
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.1px
+      color: #8EC2F2
 
+    &__mobile-wrapper
+      display: flex
+      flex-direction: column
 
+      @media (max-width: 414px)
+        flex-direction: column-reverse
 
+    &__button
+      margin-bottom: 35px
 
+      @media (max-width: 414px)
+        margin-top: 35px
+        margin-bottom: 0
 
+    &__features-item
+      display: flex
+      align-items: flex-start
 
+      &:not(:last-child)
+        margin-bottom: 15px
 
+    &__cheked
+      display: inline-block
+      margin-right: 10px
+      min-width: 32px
+      height: 32px
+      background-color: $green
+      border-radius: 50%
+      background-image: url(../img/cheked.svg)
+      background-repeat: no-repeat
+      background-position: center
 
-
-
-
-
-
-
-
+      &--not-active
+        background-color: $not-active
