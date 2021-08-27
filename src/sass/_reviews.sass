@@ -9,17 +9,28 @@
   &__title
     margin-bottom: 10px
 
+    @media (max-width: 767px)
+      padding: 0 55px
+
   &__description
     margin-bottom: 80px
     max-width: 470px
     width: 100%
 
+    @media (max-width: 767px)
+      padding: 0 50px
+      margin-bottom: 60px
+
   &__cards
     display: flex
     justify-content: space-between
     align-items: center
-    flex-flow: wrap
     gap: 30px
+    padding: 0 20px
+
+    @media (max-width: 1020px)
+      flex-direction: column
+      justify-content: center
 
   &-card
     padding: 30px 35px
