@@ -1,32 +1,79 @@
 .strategy
-    padding-bottom: 100px
-    background-color: $white
-    &__title
-        max-width: 445px
-        padding-top: 160px
-        margin: 0 auto 10px auto
-    &__description
-        max-width: 470px
-        margin: 0 auto 80px auto
-    &__cards
-        display: flex
-        align-items: center
-        justify-content: space-between
-    &__card
-        padding: 30px 40px
-        width: 250px
-        text-align: center
-        background-color: $bg-light
-        &_blue
-            background-color: $blue
-        &-img
-            text-align: center
-            margin-bottom: 10px
-        &-text
-            font-weight: 700
-            font-size: 16px
-            line-height: 24px
-            letter-spacing: 0.1px
-            color: $dark
-            &_white
-                color: $white
+  padding-top: 160px
+  padding-bottom: 105px
+  font-weight: 700
+  font-size: 16px
+  line-height: 24px
+  text-align: center
+  letter-spacing: 0.1px
+
+  &__title
+    max-width: 468px
+    width: 100%
+    margin: 0 auto 10px
+
+    @media (max-width: 480px)
+      max-width: 327px
+      padding: 0 44px
+
+  &__description
+    max-width: 470px
+    width: 100%
+    margin: 0 auto 80px
+
+    @media (max-width: 480px)
+      max-width: 330px
+      padding: 0 42px
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 20px
+    gap: 30px
+
+    @media (max-width: 710px)
+      justify-content: center
+      flex-wrap: wrap
+      padding: 0 40px
+
+    @media (max-width: 480px)
+      padding: 0 30px
+
+  &-card
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: stretch
+    max-width: 329px
+    width: 100%
+    padding: 30px 40px
+    border: 1px solid $card-border
+    background-color: $bg-light
+
+    &--blue
+      background-color: $blue
+
+    &__icon
+      display: block
+      width: 50px
+      height: 38px
+      margin-bottom: 11px
+      background-image: url(../img/people.svg)
+      background-repeat: no-repeat
+
+      @media (max-width: 710px)
+        width: 48px
+        height: 48px
+        background-image: url(../img/blue-gear.svg)
+
+      &--white
+        background-image: url(../img/white-people.svg)
+
+        @media (max-width: 710px)
+          width: 48px
+          height: 48px
+          background-image: url(../img/white-gear.svg)
+
+    &__description--white
+      color: $white
