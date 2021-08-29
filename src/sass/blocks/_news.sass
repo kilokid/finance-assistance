@@ -10,11 +10,12 @@
       margin-bottom: 30px
 
     @media (max-width: 512px)
-      padding: 0 25px
+      padding: 0 20px
 
   &__description
-    margin: 0 auto 96px
-    width: 470px
+    margin-bottom: 96px
+    max-width: 470px
+    width: 100%
 
     @media (max-width: 768px)
       margin-bottom: 60px
@@ -29,12 +30,12 @@
   &__cards
     display: flex
     justify-content: space-between
-    align-items: center
     align-items: stretch
+    max-width: 1400px
+    width: 100%
     gap: 30px
     padding: 0 15px
     margin: 0 auto
-    max-width: 1400px
 
     @media (max-width: 1212px)
       gap: 20px
@@ -65,29 +66,26 @@
     @media (max-width: 580px)
       max-width: 290px
 
-  &__card::before
-    content: ''
-    position: absolute
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
-    z-index: -1
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%)
+    &::before
+      content: ''
+      position: absolute
+      left: 0px
+      right: 0px
+      top: 0px
+      bottom: 0px
+      z-index: -1
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 14.58%, rgba(56, 56, 56, 0.84) 100%)
 
-  &__bg
-    background-repeat: no-repeat
-
-    &_1
+    &--1
       background-image: url("../img/news-bg-1.jpg")
 
-    &_2
+    &--2
       background-image: url("../img/news-bg-2.jpg")
 
-    &_3
+    &--3
       background-image: url("../img/news-bg-3.jpg")
 
-    &_4
+    &--4
       background-image: url("../img/news-bg-4.jpg")
 
   &__topic
