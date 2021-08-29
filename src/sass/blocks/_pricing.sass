@@ -80,35 +80,38 @@
       color: $grey
 
     &__price
-      max-width: 145px
-      width: 100%
+      display: grid
+      justify-items: center
+      grid-template-areas: "val cur" "sub sub"
       margin: 0 auto 35px
-      // margin-bottom: 35px
       font-weight: 700
       font-size: 40px
       line-height: 57px
       color: $blue
 
-      @media (max-width: 415px)
-        max-width: 205px
-        width: 100%
+      @media (max-width: 1100px)
+        grid-template-areas: "val cur" "val sub"
 
     &__value
-      margin-left: 0
-      vertical-align: baseline
+      justify-self: end
+      grid-area: val
+
+      @media (max-width: 1100px)
+        justify-self: center
+        margin-right: 10px
 
     &__currency
-      vertical-align: baseline
+      justify-self: start
+      grid-area: cur
 
-      @media (max-width: 415px)
-        vertical-align: top
+      @media (max-width: 1100px)
+        font-weight: 700
         font-size: 16px
         line-height: 24px
         letter-spacing: 0.1px
 
     &__subscription
-      display: block
-      vertical-align: baseline
+      grid-area: sub
       text-align: center
       margin-left: 0
       font-weight: bold
@@ -116,11 +119,6 @@
       line-height: 24px
       letter-spacing: 0.1px
       color: #8EC2F2
-
-      @media (max-width: 415px)
-        display: inline-block
-        margin-left: -1.4em
-        vertical-align: bottom
 
     &__mobile-wrapper
       display: flex
