@@ -8,12 +8,20 @@
   letter-spacing: 0.1px
 
   &__title
+    max-width: 481px
+    width: 100%
     padding: 0 20px
     margin: 0 auto 10px
 
   &__description
+    max-width: 470px
+    width: 100%
     padding: 0 20px
     margin: 0 auto 80px
+
+    @media (max-width: 710px)
+      margin: 0 auto 60px
+      padding: 0 42px
 
   &__cards
     display: flex
