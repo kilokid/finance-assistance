@@ -25,6 +25,7 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-flow: wrap
     gap: 30px
     padding: 0 20px
 
@@ -33,6 +34,9 @@
       justify-content: center
 
   &-card
+    display: flex
+    flex-direction: column
+    align-self: stretch
     padding: 30px 35px
     border: 1px solid $light-gray
     border-radius: 5px
