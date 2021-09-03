@@ -1,43 +1,76 @@
 .reviews
-    &__title
-        margin: 112px 0 10px 0
-    &__description
-        max-width: 470px
-        margin: 0 auto 80px auto
-    &__cards
-        display: flex
-        justify-content: space-between
-        grid-gap: 30px
-        margin-bottom: 112px
-    &__card
-        width: 327px
-        min-height: 180px
-        padding: 30px 40px 30px 35px
-        &-text
-            font-weight: 600
-            font-size: 14px
-            line-height: 24px
-            letter-spacing: 0.2px
-            color: $grey
-            margin-bottom: 20px
-            max-width: 280px
-        &-author
-            display: flex
-            &-avatar
-                margin-right: 15px
-            &-description
-                display: flex
-                flex-direction: column
-            &-name
-                font-weight: 600
-                font-size: 14px
-                line-height: 24px
-                letter-spacing: 0.2px
-                color: $blue
-            &-job
-                font-weight: 600
-                font-size: 14px
-                line-height: 24px
-                letter-spacing: 0.2px
+  padding-top: 112px
+  padding-bottom: 112px
+  font-weight: 600
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.2px
+
+  &__title
+    margin-bottom: 10px
+
+    @media (max-width: 767px)
+      padding: 0 20px
+
+  &__description
+    margin-bottom: 80px
+    max-width: 470px
+    width: 100%
+
+    @media (max-width: 767px)
+      padding: 0 20px
+      margin-bottom: 60px
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-self: stretch
+    gap: 30px
+    padding: 0 20px
+
+    @media (max-width: 1020px)
+      flex-direction: column
+      justify-content: center
+
+  &-card
+    display: flex
+    flex-direction: column
+    align-self: stretch
+    padding: 30px 35px
+    border: 1px solid $light-gray
+    border-radius: 5px
+    background-color: $white
+
     &__rating
-        margin-bottom: 20px
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+
+      img:not(:last-child)
+        margin-right: 5px
+
+      img:last-child
+        margin-top: 1px
+
+    &__text
+      margin-bottom: 20px
+      max-width: 234px
+      width: 100%
+      color: $grey
+
+    &__author
+      display: flex
+
+    &__author-avatar
+      margin-right: 15px
+
+    &__author-description
+      display: inherit
+      flex-direction: column
+
+    &__author-name
+      color: $blue
+
+    &__author-job
+      color: $dark
