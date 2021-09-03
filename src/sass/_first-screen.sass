@@ -1,50 +1,7 @@
-// .main
-//     margin-top: 15%
-//     padding-bottom: 25%
-//     display: flex
-//     z-index: 999
-//     &__title
-//         font-weight: 800
-//         font-size: 58px
-//         line-height: 80px
-//         letter-spacing: 0.2px
-//         color: $dark
-//         max-width: 509px
-//         margin-bottom: 35px
-//     &__text
-//         font-weight: 500
-//         font-size: 20px
-//         line-height: 30px
-//         letter-spacing: 0.2px
-//         color: $grey
-//         max-width: 376px
-//     &__buttons
-//         margin-top: 35px
-//     &__button
-//         margin-right: 10px
-
-// .cerclebg
-//     position: absolute
-//     background-image: url('../img/circle.png')
-//     background-repeat: no-repeat
-//     width: 209px
-//     height: 285px
-//     top: 85px
-// .phonebg
-//     position: absolute
-//     background-image: url('../img/phone-bg.png')
-//     width: 689px
-//     height: 644px
-//     right: 100px
-//     top: 90px
-//     background-repeat: no-repeat
-//     z-index: -999
-
 .first-screen
   position: relative
-  padding-top: 80px
-  padding-bottom: 80px
-  border: 1px solid red
+  padding-top: 50px
+  padding-bottom: 80p
 
   &::before
     content: ""
@@ -55,6 +12,7 @@
     height: 100%
     background-image: url(../img/circle.png)
     background-repeat: no-repeat
+    z-index: -1
 
   &__content
     display: flex
@@ -62,12 +20,10 @@
     justify-content: space-between
 
   &__description
-    width: 100%
     font-weight: 500
     font-size: 20px
     line-height: 30px
     letter-spacing: 0.2px
-    border: 1px solid red
 
   &__title
     margin-bottom: 35px
@@ -75,12 +31,12 @@
     font-size: 58px
     line-height: 80px
     color: $dark
-    border: 1px solid red
 
   &__subtitle
     margin-bottom: 35px
     color: $grey
-    border: 1px solid red
 
   &__img
-    border: 1px solid red
+    // max-width: 600px
+    // width: 100%
+    margin-right: -100px
