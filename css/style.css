@@ -165,6 +165,10 @@ ul {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.1px; }
+  @media (max-width: 710px) {
+    .strategy {
+      padding-top: 100px;
+      padding-bottom: 50px; } }
   .strategy__title {
     max-width: 481px;
     padding: 0 20px;
@@ -222,6 +226,10 @@ ul {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.2px; }
+  @media (max-width: 1020px) {
+    .reviews {
+      padding-top: 75px;
+      padding-bottom: 90px; } }
   .reviews__title {
     margin-bottom: 10px; }
     @media (max-width: 767px) {
@@ -282,6 +290,10 @@ ul {
 .news {
   padding-top: 112px;
   padding-bottom: 112px; }
+  @media (max-width: 768px) {
+    .news {
+      padding-top: 75px;
+      padding-bottom: 90px; } }
   .news__title {
     margin-bottom: 10px; }
     @media (max-width: 768px) {
@@ -389,6 +401,10 @@ ul {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.2px; }
+  @media (max-width: 1100px) {
+    .pricing {
+      padding-top: 75px;
+      padding-bottom: 150px; } }
   .pricing__title {
     margin-bottom: 10px; }
   .pricing__description {
