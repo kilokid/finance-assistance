@@ -1,0 +1,65 @@
+.top-footer
+  padding-top: 80px
+  background-color: $white
+
+  &__content
+    display: flex
+    gap: 30px
+    padding: 0 87px
+    margin-bottom: 80px
+
+    @media (max-width: 1100px)
+      flex-flow: wrap
+      justify-content: center
+      gap: 100px
+
+    @media (max-width: 756px)
+      justify-content: center
+      gap: 30px
+
+    @media (max-width: 376px)
+      justify-content: flex-start
+      padding: 0 30px
+
+  &__title
+    margin-bottom: 20px
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.1px
+    color: $dark
+
+    &--get-in-touch
+      margin-bottom: 25px
+
+  &__description
+    margin-bottom: 25px
+    font-weight: 500
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: 0.2px
+    color: $grey
+
+  &__social
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+  &__social-item
+    &:not(:last-child)
+      margin-right: 20.5px
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 10px
+
+  &__link
+    font-weight: 600
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: 0.2px
+    color: $grey
+
+  &__card
+    max-width: 241px
+    width: 100%
