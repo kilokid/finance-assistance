@@ -1,0 +1,84 @@
+.first-screen
+  position: relative
+  padding: 50px 25px 80px
+
+  @media (max-width: 378px)
+    padding: 100px 15px 80px
+
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-image: url(../img/circle.png)
+    background-repeat: no-repeat
+    z-index: -5
+
+    @media (max-width: 378px)
+      left: -35%
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @media (max-width: 994px)
+      justify-content: center
+      flex-wrap: wrap
+
+  &__description
+    font-weight: 500
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.2px
+
+    @media (max-width: 994px)
+      text-align: center
+      padding: 0 10px
+
+  &__title
+    margin-bottom: 35px
+    font-weight: 800
+    font-size: 58px
+    line-height: 80px
+    color: $dark
+
+    @media (max-width: 994px)
+      font-weight: 700
+      font-size: 40px
+      line-height: 57px
+
+
+  &__subtitle
+    margin-bottom: 35px
+    color: $grey
+  &__buttons
+    display: flex
+    margin: 0 auto
+
+    @media (max-width: 994px)
+      max-width: 200px
+      flex-direction: column
+      justify-content: center
+      flex-basis: 10%
+      margin-bottom: 30px
+
+  &__button
+    margin-left: 10px
+
+    @media (max-width: 994px)
+      margin: 20px auto 0 auto
+
+  &__img
+    margin-right: -100px
+
+    @media (max-width: 994px)
+      margin: 0
+
+  &__img-phone
+    @media (max-width: 700px)
+      max-width: 689px
+      width: 100%
+      height: auto
