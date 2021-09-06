@@ -1,0 +1,35 @@
+.pricing
+  padding-top: 112px
+  padding-bottom: 112px
+  font-weight: 600
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.2px
+
+  @media (max-width: 1100px)
+    padding-top: 75px
+    padding-bottom: 150px
+
+  &__title
+    margin-bottom: 10px
+
+  &__description
+    max-width: 470px
+    width: 100%
+    margin: 0 auto 80px
+    padding: 0 25px
+    text-align: center
+
+    @media (max-width: 415px)
+      margin: 0 auto 60px
+
+  &__cards
+    display: flex
+    justify-content: space-between
+    flex-flow: wrap
+    gap: 30px
+
+    @media (max-width: 1100px)
+      flex-direction: column
+      align-items: center
+      gap: 60px
