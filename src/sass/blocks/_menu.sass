@@ -1,0 +1,89 @@
+.menu
+  padding: 20px 0
+  display: flex
+  justify-content: space-between
+  box-sizing: border-box
+  align-items: center
+  font-style: normal
+  font-weight: bold
+  font-size: 14px
+  line-height: 22px
+  letter-spacing: 0.2px
+
+  @media (max-width: 1080px)
+    padding: 20px 15px
+
+  @media (max-width: 885px)
+    justify-content: space-around
+
+  &__logo
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.1px
+
+  &__links
+    display: flex
+
+    @media (max-width: 885px)
+      display: none
+
+  &__link
+    &:not(:last-child)
+      margin-right: 21px
+
+  &__item
+    font-weight: 600
+    font-size: 14px
+    line-height: 24px
+    text-align: center
+    color: $grey
+
+  &__user
+    display: none
+    align-items: center
+
+    @media (max-width: 885px)
+      display: flex
+
+
+
+  &__burger
+    border: none
+    background-color: $bg-light
+
+  &__burger, &__basket
+    margin-left: 25px
+
+    @media (max-width: 321px)
+      margin-left: 15px
+
+  &__login
+    @media (max-width: 885px)
+      display: none
+
+  &__entrance
+    color: $blue
+    cursor: pointer
+
+  &__button
+    margin-left: 45px
+    padding: 15px 25px
+    border: none
+    border-radius: 5px
+    background-color: $blue
+    font-weight: bold
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 0.2px
+    color: $white
+    cursor: pointer
+
+    &::after
+      content: ""
+      display: inline-block
+      margin-left: 15px
+      background-image: url(../img/arrow.svg)
+      width: 12px
+      height: 10px
+      background-repeat: no-repeat
+

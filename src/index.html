@@ -11,32 +11,50 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <!-- <header>
-        <div class="container">
-            <div class="header header_position">
-                <span class="header__logo">BrandName</span>
-                <nav>
-                    <ul class="menu header__menu">
-                        <li><a class="menu__item header__item" href="#">Home</a></li>
-                        <li><a class="menu__item header__item" href="#">Product</a></li>
-                        <li><a class="menu__item header__item" href="#">Pricing</a></li>
-                        <li><a class="menu__item header__item" href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-login">
-                    <span class="header__login">Login</span>
-                    <div class="header__button">
-                        <a class="header__button-text" href="#"> Become a member</a>
-                        <img src="img/arrow.svg" alt="Icon: arrow-right">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> -->
-
     <!-- New menu-->
     <header>
-
+      <div class="menu container">
+        <span class="menu__logo">BrandName</span>
+          <nav>
+            <ul class="menu__links">
+              <li class="menu__link">
+                <a class="menu__item" href="#">Home</a>
+              </li>
+              <li class="menu__link">
+                <a class="menu__item" href="#">Product</a>
+              </li>
+              <li class="menu__link">
+                <a class="menu__item" href="#">Pricing</a>
+              </li>
+              <li class="menu__link">
+                <a class="menu__item" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <ul class="menu__user">
+              <li>
+                <a class="menu__search" href="#">
+                  <img src="img/search.svg" alt="Icon: Search">
+                </a>
+              </li>
+              <li>
+                <a class="menu__basket" href="#">
+                  <img src="img/basket.svg" alt="Icon: Basket">
+                </a>
+              </li>
+              <li>
+                <button class="menu__burger" href="#">
+                  <img src="img/burger-menu.svg" alt="icon: Menu">
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__login">
+            <span class="menu__entrance">Login</span>
+            <button class="menu__button">Become a member</button>
+          </div>
+      </div>
     </header>
     <!-- End new menu -->
     <main>
@@ -148,8 +166,8 @@
         </div>
         <section class="news">
           <div class="section container">
-            <h2 class="section__title news__title">Latest News</h2>
-            <p class="section__description news__description">
+            <h2 class="section-title news__title">Latest News</h2>
+            <p class="section-description news__description">
               Problems trying to resolve the conflict between two major realms of Classical physics: Newtonian mechanics
             </p>
           </div>
