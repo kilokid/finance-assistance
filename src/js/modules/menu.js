@@ -6,6 +6,9 @@ export const menu = () => {
     menuItem.classList.toggle('active');
   });
 
+  const closeMenu = () => {
+    menuItem.classList.remove('active');
+  };
   // Сделал твоим способом закрытие меню по клику вне его :)
   document.addEventListener('click', (event) => {
     const target = event.target;
@@ -13,7 +16,7 @@ export const menu = () => {
     if (target.closest('.menu')) {
       return;
     } else {
-      menuItem.classList.toggle('active');
+      closeMenu();
     }
   });
 };
