@@ -5,4 +5,15 @@ export const menu = () => {
   btn.addEventListener('click', () => {
     menuItem.classList.toggle('active');
   });
+
+  // Сделал твоим способом закрытие меню по клику вне его :)
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if (target.closest('.menu')) {
+      return;
+    } else {
+      menuItem.classList.toggle('active');
+    }
+  });
 };
