@@ -1,13 +1,13 @@
 export const menu = () => {
   const btn = document.querySelector('.menu__burger');
-  const menuItem = document.querySelector('.menu__links');
+  const menuElem = document.querySelector('.menu__links');
 
   btn.addEventListener('click', () => {
-    menuItem.classList.toggle('active');
+    menuElem.classList.toggle('menu--active');
   });
 
   const closeMenu = () => {
-    menuItem.classList.remove('active');
+    menuElem.classList.remove('menu--active');
   };
   // Сделал твоим способом закрытие меню по клику вне его :)
   document.addEventListener('click', (event) => {
@@ -15,8 +15,8 @@ export const menu = () => {
 
     if (target.closest('.menu')) {
       return;
-    } else {
-      closeMenu();
     }
+
+    closeMenu();
   });
 };
