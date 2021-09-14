@@ -34,6 +34,17 @@
 
     @media (max-width: 885px)
       display: none
+      &--active
+        display: flex
+        position: absolute
+        flex-direction: column
+        align-items: center
+        top: 100%
+        right: 0
+        left: 0
+        z-index: 1
+        padding: 20px 0px 50px
+        background-color: $border-menu
 
   &__item
     &:not(:last-child)
@@ -56,6 +67,7 @@
   &__user
     display: none
     align-items: center
+    height: 24px
 
     @media (max-width: 885px)
       display: flex
@@ -95,16 +107,3 @@
       width: 12px
       height: 10px
       background-repeat: no-repeat
-
-  &--active
-    @media (max-width: 885px)
-      display: flex
-      position: absolute
-      flex-direction: column
-      align-items: center
-      top: 100%
-      right: 0
-      left: 0
-      z-index: 1
-      padding: 20px 0px 50px
-      background-color: $border-menu
