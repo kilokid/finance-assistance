@@ -1,0 +1,109 @@
+.menu
+  position: relative
+  padding: 20px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-weight: bold
+  font-size: 14px
+  line-height: 22px
+  letter-spacing: 0.2px
+
+  @media (max-width: 1080px)
+    padding: 20px 15px
+
+  @media (max-width: 885px)
+    justify-content: space-around
+    background-color: $border-menu
+
+  &__logo
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.1px
+
+  &__nav
+    display: flex
+    align-items: center
+
+  &__links
+    display: flex
+    flex-flow: wrap
+    padding: 0 15px
+    max-width: 100%
+    width: 100%
+
+    @media (max-width: 885px)
+      display: none
+      &--active
+        display: flex
+        position: absolute
+        flex-direction: column
+        align-items: center
+        top: 100%
+        right: 0
+        left: 0
+        z-index: 1
+        padding: 20px 0px 50px
+        background-color: $border-menu
+
+  &__item
+    &:not(:last-child)
+      margin-right: 21px
+
+      @media (max-width: 885px)
+        margin: 0
+        margin-bottom: 30px
+
+  &__link
+    line-height: 24px
+    text-align: center
+    color: $grey
+
+    @media (max-width: 885px)
+      font-weight: normal
+      font-size: 30px
+      line-height: 45px
+
+  &__user
+    display: none
+    align-items: center
+    height: 24px
+
+    @media (max-width: 885px)
+      display: flex
+
+  &__burger
+    display: none
+    border: none
+    background-color: $bg-light
+    cursor: pointer
+
+    @media (max-width: 885px)
+      display: flex
+
+  &__burger, &__basket
+    margin-left: 25px
+
+    @media (max-width: 321px)
+      margin-left: 15px
+
+  &__login
+    @media (max-width: 885px)
+      display: none
+
+  &__entrance
+    color: $blue
+    cursor: pointer
+
+  &__button
+    margin-left: 45px
+    padding: 15px 25px
+
+    &::after
+      content: ""
+      display: inline-block
+      margin-left: 15px
+      background-image: url(../img/arrow.svg)
+      width: 12px
+      height: 10px
+      background-repeat: no-repeat
