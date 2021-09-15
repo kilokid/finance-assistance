@@ -92,8 +92,22 @@
       display: none
 
   &__entrance
+    border: none
+    background-color: inherit
+    font-weight: bold
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 0.2px
     color: $blue
     cursor: pointer
+
+    &:hover,
+    &:active
+      border-bottom: 3px solid $dark
+
+    &:focus
+      outline: none
+      box-shadow: 0 2px 0 0 lightskyblue
 
   &__button
     margin-left: 45px
