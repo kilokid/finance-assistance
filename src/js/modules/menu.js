@@ -2,18 +2,15 @@ export const menu = () => {
   const btn = document.querySelector('.menu__burger');
   const menuElem = document.querySelector('.menu__links');
   const menuLogin = document.querySelector('.menu__login');
-  const btnLogin = menuLogin.querySelector('.menu__entrance');
 
   btn.addEventListener('click', () => {
     menuElem.classList.toggle('menu__links--active');
     menuLogin.classList.toggle('menu__login--active');
-    btnLogin.classList.toggle('menu__entrance--active');
   });
 
   const closeMenu = () => {
     menuElem.classList.remove('menu__links--active');
     menuLogin.classList.remove('menu__login--active');
-    btnLogin.classList.remove('menu__entrance--active');
   };
   // Сделал твоим способом закрытие меню по клику вне его :)
   document.addEventListener('click', (event) => {

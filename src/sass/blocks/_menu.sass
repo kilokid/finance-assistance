@@ -44,7 +44,7 @@
         right: 0
         left: 0
         z-index: 1
-        padding: 20px 0px 80px
+        padding: 20px 0px 155px
         background-color: $border-menu
 
   &__item
@@ -97,25 +97,23 @@
         right: 0
         left: 0
         top: 500%
-        z-index: 3
         display: flex
+        flex-direction: column
         justify-content: center
         align-items: center
+        z-index: 1
 
   &__entrance
     color: $blue
     cursor: pointer
 
     @media (max-width: 885px)
-      display: none
-
-      &--active
-        display: block
-        margin-top: 30px
-        padding: 10px 35px
-        border-radius: 50px
-        background-color: $blue
-        color: $white
+      margin-top: 30px
+      margin-bottom: 20px
+      padding: 10px 35px
+      border-radius: 5px
+      background-color: $blue
+      color: $white
 
   &__button
     margin-left: 45px
@@ -131,4 +129,4 @@
       background-repeat: no-repeat
 
     @media (max-width: 885px)
-      display: none
+      margin: 0
