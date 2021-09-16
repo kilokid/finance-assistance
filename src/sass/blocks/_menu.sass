@@ -34,6 +34,7 @@
 
     @media (max-width: 885px)
       display: none
+
       &--active
         display: flex
         position: absolute
@@ -43,8 +44,9 @@
         right: 0
         left: 0
         z-index: 1
-        padding: 20px 0px 50px
+        padding: 20px 0px 80px
         background-color: $border-menu
+        // background-color: $dark
 
   &__item
     &:not(:last-child)
@@ -91,9 +93,30 @@
     @media (max-width: 885px)
       display: none
 
+      &--active
+        position: absolute
+        right: 0
+        left: 0
+        top: 500%
+        z-index: 3
+        display: flex
+        justify-content: center
+        align-items: center
+
   &__entrance
     color: $blue
     cursor: pointer
+
+    @media (max-width: 885px)
+      display: none
+
+      &--active
+        display: block
+        margin-top: 30px
+        padding: 10px 35px
+        border-radius: 50px
+        background-color: $blue
+        color: $white
 
   &__button
     margin-left: 45px
@@ -107,3 +130,6 @@
       width: 12px
       height: 10px
       background-repeat: no-repeat
+
+    @media (max-width: 885px)
+      display: none
