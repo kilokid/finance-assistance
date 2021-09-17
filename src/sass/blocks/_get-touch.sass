@@ -68,8 +68,17 @@
     cursor: pointer
     color: $white
     background-color: $blue
+    font-family: inherit
     font-size: 14px
     line-height: 28px
     letter-spacing: 0.2px
     font-weight: 400
     white-space: pre-wrap
+
+    &:hover,
+    &:active
+      background-color: $dark
+
+    &:focus
+      outline: none
+      box-shadow: 0 0 0 3px lightskyblue
