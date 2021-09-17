@@ -1,5 +1,6 @@
 .button
   display: inline-block
+  font-family: inherit
   font-weight: 700
   font-size: 14px
   line-height: 22px
@@ -12,6 +13,14 @@
   color: $white
   cursor: pointer
 
+  &:hover,
+  &:active
+    background-color: $dark
+
+  &:focus
+    outline: none
+    box-shadow: 0 0 0 3px lightskyblue
+
   &--white
     background-color: $white
     border: 1px solid $blue
@@ -20,6 +29,11 @@
     color: $blue
     cursor: pointer
 
+    &:hover,
+    &:active
+      background-color: $dark
+      border: 1px solid $dark
+      color: $white
+
   &--rectangle
     border-radius: 5px
-
