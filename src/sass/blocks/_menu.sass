@@ -113,6 +113,14 @@
     color: $blue
     cursor: pointer
 
+    &:hover,
+    &:active
+      border-bottom: 3px solid $dark
+
+    &:focus
+      outline: none
+      box-shadow: 0 2px 0 0 lightskyblue
+
     @media (max-width: 885px)
       margin-top: 30px
       margin-bottom: 20px
@@ -120,14 +128,6 @@
       border-radius: 5px
       background-color: $blue
       color: $white
-
-  &:hover,
-    &:active
-      border-bottom: 3px solid $dark
-
-    &:focus
-      outline: none
-      box-shadow: 0 2px 0 0 lightskyblue
 
   &__button
     margin-left: 45px
