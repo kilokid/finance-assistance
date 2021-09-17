@@ -14,6 +14,6 @@
 	"eqeqeq": true,
 	"latedef": true,
 	"noempty": true,
-  "funcscope": true,
-  "node": true
+  	"funcscope": true,
+  	"node": true
 }
