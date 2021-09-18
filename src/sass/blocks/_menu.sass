@@ -122,12 +122,22 @@
       box-shadow: 0 2px 0 0 lightskyblue
 
     @media (max-width: 885px)
-      margin-top: 30px
-      margin-bottom: 20px
-      padding: 10px 35px
-      border-radius: 5px
-      background-color: $blue
+      margin-top: 20px
+      margin-bottom: 10px
+      padding: 15px 37px
+      width: 220px
       color: $white
+      border-radius: 5px
+      border: none
+      background-color: $blue
+
+      &:hover,
+      &:active
+        background-color: $dark
+
+      &:focus
+        outline: none
+        box-shadow: none
 
   &__button
     margin-left: 45px
