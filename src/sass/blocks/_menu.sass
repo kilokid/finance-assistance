@@ -13,6 +13,7 @@
     padding: 20px 15px
 
   @media (max-width: 885px)
+    padding: 20px 0
     justify-content: space-around
     background-color: $border-menu
 
@@ -20,6 +21,19 @@
     font-size: 24px
     line-height: 32px
     letter-spacing: 0.1px
+
+      // &--active
+      //   position: absolute
+      //   display: flex
+      //   flex-direction: column
+      //   align-items: center
+      //   top: 100%
+      //   right: 0
+      //   left: 0
+      //   z-index: 1
+      //   padding: 20px 0px 155px
+      //   // background-color: $border-menu
+      //   background-color: $dark
 
   &__nav
     display: flex
@@ -29,23 +43,11 @@
     display: flex
     flex-flow: wrap
     padding: 0 15px
-    max-width: 100%
-    width: 100%
 
     @media (max-width: 885px)
       display: none
-
-      &--active
-        display: flex
-        position: absolute
-        flex-direction: column
-        align-items: center
-        top: 100%
-        right: 0
-        left: 0
-        z-index: 1
-        padding: 20px 0px 155px
-        background-color: $border-menu
+      flex-direction: column
+      text-align: center
 
   &__item
     &:not(:last-child)
@@ -82,26 +84,18 @@
     @media (max-width: 885px)
       display: flex
 
-  &__burger, &__basket
+  &__burger, &__register
     margin-left: 25px
 
     @media (max-width: 321px)
       margin-left: 15px
 
-  &__login
+  &__buttons
+    display: flex
+    align-items: center
+
     @media (max-width: 885px)
       display: none
-
-      &--active
-        position: absolute
-        right: 0
-        left: 0
-        top: 500%
-        display: flex
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        z-index: 1
 
   &__entrance
     border: none
@@ -113,6 +107,16 @@
     color: $blue
     cursor: pointer
 
+    &::before
+      content: ""
+      display: inline-block
+      background-image: url(../img/login-blue.svg)
+      background-repeat: no-repeat
+      margin-right: 12px
+      width: 20px
+      height: 18px
+      vertical-align: top
+
     &:hover,
     &:active
       border-bottom: 3px solid $dark
@@ -121,27 +125,19 @@
       outline: none
       box-shadow: 0 2px 0 0 lightskyblue
 
-    @media (max-width: 885px)
-      margin-top: 20px
-      margin-bottom: 10px
-      padding: 15px 37px
-      width: 220px
-      color: $white
-      border-radius: 5px
-      border: none
-      background-color: $blue
-
-      &:hover,
-      &:active
-        background-color: $dark
-
-      &:focus
-        outline: none
-        box-shadow: none
-
   &__button
     margin-left: 45px
     padding: 15px 25px
+
+    &::before
+      content: ""
+      display: inline-block
+      background-image: url(../img/register-white.svg)
+      background-repeat: no-repeat
+      margin-right: 12px
+      width: 19px
+      height: 16px
+      vertical-align: top
 
     &::after
       content: ""
@@ -151,6 +147,4 @@
       width: 12px
       height: 10px
       background-repeat: no-repeat
-
-    @media (max-width: 885px)
-      margin: 0
+      vertical-align: top
