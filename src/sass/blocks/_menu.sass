@@ -22,19 +22,6 @@
     line-height: 32px
     letter-spacing: 0.1px
 
-      // &--active
-      //   position: absolute
-      //   display: flex
-      //   flex-direction: column
-      //   align-items: center
-      //   top: 100%
-      //   right: 0
-      //   left: 0
-      //   z-index: 1
-      //   padding: 20px 0px 155px
-      //   // background-color: $border-menu
-      //   background-color: $dark
-
   &__nav
     display: flex
     align-items: center
@@ -48,6 +35,18 @@
       display: none
       flex-direction: column
       text-align: center
+
+      &--active
+        position: absolute
+        display: flex
+        flex-direction: column
+        align-items: center
+        top: 100%
+        right: 0
+        left: 0
+        z-index: 1
+        padding: 50px 0px 100px
+        background-color: $border-menu
 
   &__item
     &:not(:last-child)
@@ -66,29 +65,6 @@
       font-weight: normal
       font-size: 30px
       line-height: 45px
-
-  &__user
-    display: none
-    align-items: center
-    height: 24px
-
-    @media (max-width: 885px)
-      display: flex
-
-  &__burger
-    display: none
-    border: none
-    background-color: $bg-light
-    cursor: pointer
-
-    @media (max-width: 885px)
-      display: flex
-
-  &__burger, &__register
-    margin-left: 25px
-
-    @media (max-width: 321px)
-      margin-left: 15px
 
   &__buttons
     display: flex
@@ -115,7 +91,7 @@
       margin-right: 12px
       width: 20px
       height: 18px
-      vertical-align: top
+      vertical-align: sub
 
     &:hover,
     &:active
@@ -137,7 +113,7 @@
       margin-right: 12px
       width: 19px
       height: 16px
-      vertical-align: top
+      vertical-align: text-top
 
     &::after
       content: ""
@@ -147,4 +123,29 @@
       width: 12px
       height: 10px
       background-repeat: no-repeat
-      vertical-align: top
+
+  &__user
+    display: none
+    align-items: center
+    justify-content: space-between
+
+    @media (max-width: 885px)
+      display: flex
+
+  &__login
+    border: none
+    background-color: $bg-light
+    cursor: pointer
+
+  &__register
+    border: none
+    background-color: $bg-light
+    cursor: pointer
+
+  &__burger
+    border: none
+    background-color: $bg-light
+    cursor: pointer
+
+  &__register, &__burger
+    margin-left: 30px
