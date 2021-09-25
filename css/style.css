@@ -144,9 +144,6 @@ ul {
   .menu__buttons {
     display: flex;
     align-items: center; }
-    @media (max-width: 885px) {
-      .menu__buttons {
-        display: none; } }
   .menu__entrance {
     border: none;
     background-color: inherit;
@@ -156,32 +153,33 @@ ul {
     letter-spacing: 0.2px;
     color: #23A6F0;
     cursor: pointer; }
-    .menu__entrance::before {
-      content: "";
-      display: inline-block;
-      background-image: url(../img/login-blue.svg);
-      background-repeat: no-repeat;
-      margin-right: 12px;
-      width: 20px;
-      height: 18px;
-      vertical-align: sub; }
     .menu__entrance:hover, .menu__entrance:active {
-      border-bottom: 3px solid #252B42; }
+      border-bottom: none; }
     .menu__entrance:focus {
       outline: none;
       box-shadow: 0 2px 0 0 lightskyblue; }
+  .menu__login {
+    margin-right: 12px;
+    vertical-align: text-bottom; }
+    @media (max-width: 885px) {
+      .menu__login {
+        margin: 0; }
+        .menu__login--gray {
+          fill: #737373; } }
   .menu__button {
     margin-left: 45px;
     padding: 15px 25px; }
-    .menu__button::before {
-      content: "";
-      display: inline-block;
-      background-image: url(../img/register-white.svg);
-      background-repeat: no-repeat;
-      margin-right: 12px;
-      width: 19px;
-      height: 16px;
-      vertical-align: text-top; }
+    @media (max-width: 885px) {
+      .menu__button {
+        border: none;
+        background-color: inherit;
+        margin: 0;
+        padding: 0; }
+        .menu__button:hover, .menu__button:active {
+          background-color: inherit; }
+        .menu__button:focus {
+          outline: none;
+          box-shadow: none; } }
     .menu__button::after {
       content: "";
       display: inline-block;
@@ -190,27 +188,30 @@ ul {
       width: 12px;
       height: 10px;
       background-repeat: no-repeat; }
-  .menu__user {
-    display: none;
-    align-items: center;
-    justify-content: space-between; }
-    @media (max-width: 885px) {
-      .menu__user {
-        display: flex; } }
-  .menu__login {
-    border: none;
-    background-color: #FAFAFA;
-    cursor: pointer; }
+      @media (max-width: 885px) {
+        .menu__button::after {
+          display: none; } }
   .menu__register {
-    border: none;
-    background-color: #FAFAFA;
-    cursor: pointer; }
+    margin-right: 12px;
+    vertical-align: text-bottom; }
+    @media (max-width: 885px) {
+      .menu__register {
+        margin-right: 0;
+        margin-left: 25px; }
+        .menu__register--gray {
+          fill: #737373; } }
   .menu__burger {
+    display: none;
     border: none;
     background-color: #FAFAFA;
     cursor: pointer; }
-  .menu__register, .menu__burger {
-    margin-left: 30px; }
+    @media (max-width: 885px) {
+      .menu__burger {
+        display: flex;
+        margin-left: 25px; } }
+  @media (max-width: 885px) {
+    .menu__text {
+      display: none; } }
 
 .first-screen {
   position: relative;
