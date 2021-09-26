@@ -75,8 +75,7 @@ a {
   a:hover, a:active {
     box-shadow: 0 2px 0 0 #23A6F0; }
   a:focus {
-    background-color: #252B42;
-    color: #FFFFFF; }
+    color: #252B42; }
 
 ul {
   list-style-type: none; }
@@ -96,16 +95,23 @@ ul {
       padding: 20px 15px; } }
   @media (max-width: 885px) {
     .menu {
-      padding: 20px 0;
-      justify-content: space-around;
       background-color: #F7F7F7; } }
   .menu__logo {
+    margin-right: 83px;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0.1px; }
+    @media (max-width: 995px) {
+      .menu__logo {
+        margin-right: 20px; } }
   .menu__nav {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    @media (max-width: 885px) {
+      .menu__nav {
+        justify-content: flex-end; } }
   .menu__links {
     display: flex;
     flex-flow: wrap;
@@ -141,9 +147,6 @@ ul {
         font-weight: normal;
         font-size: 30px;
         line-height: 45px; } }
-  .menu__buttons {
-    display: flex;
-    align-items: center; }
   .menu__entrance {
     border: none;
     background-color: inherit;
@@ -154,10 +157,7 @@ ul {
     color: #23A6F0;
     cursor: pointer; }
     .menu__entrance:hover, .menu__entrance:active {
-      border-bottom: none; }
-    .menu__entrance:focus {
-      outline: none;
-      box-shadow: 0 2px 0 0 lightskyblue; }
+      border-bottom: 1px solid #23A6F0; }
   .menu__login {
     margin-right: 12px;
     vertical-align: text-bottom; }
@@ -168,18 +168,23 @@ ul {
           fill: #737373; } }
   .menu__button {
     margin-left: 45px;
-    padding: 15px 25px; }
+    padding: 15px 25px;
+    background-color: #23A6F0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    cursor: pointer; }
+    .menu__button:hover, .menu__button:active {
+      box-shadow: none;
+      background-color: #252B42; }
+    @media (max-width: 920px) {
+      .menu__button {
+        margin-left: 25px; } }
     @media (max-width: 885px) {
       .menu__button {
         border: none;
         background-color: inherit;
         margin: 0;
-        padding: 0; }
-        .menu__button:hover, .menu__button:active {
-          background-color: inherit; }
-        .menu__button:focus {
-          outline: none;
-          box-shadow: none; } }
+        padding: 0; } }
     .menu__button::after {
       content: "";
       display: inline-block;
