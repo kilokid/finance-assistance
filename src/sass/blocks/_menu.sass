@@ -13,18 +13,25 @@
     padding: 20px 15px
 
   @media (max-width: 885px)
-    padding: 20px 0
-    justify-content: space-around
     background-color: $border-menu
 
   &__logo
+    margin-right: 83px
     font-size: 24px
     line-height: 32px
     letter-spacing: 0.1px
 
+    @media (max-width: 995px)
+      margin-right: 20px
+
   &__nav
     display: flex
     align-items: center
+    justify-content: space-between
+    width: 100%
+
+    @media (max-width: 885px)
+      justify-content: flex-end
 
   &__links
     display: flex
@@ -66,10 +73,6 @@
       font-size: 30px
       line-height: 45px
 
-  &__buttons
-    display: flex
-    align-items: center
-
   &__entrance
     border: none
     background-color: inherit
@@ -82,11 +85,7 @@
 
     &:hover,
     &:active
-      border-bottom: none
-
-    &:focus
-      outline: none
-      box-shadow: 0 2px 0 0 lightskyblue
+      border-bottom: 1px solid $blue
 
   &__login
     margin-right: 12px
@@ -100,20 +99,24 @@
   &__button
     margin-left: 45px
     padding: 15px 25px
+    background-color: $blue
+    border-radius: 5px
+    color: $white
+    cursor: pointer
+
+    &:hover,
+    &:active
+      box-shadow: none
+      background-color: $dark
+
+    @media (max-width: 920px)
+      margin-left: 25px
 
     @media (max-width: 885px)
       border: none
       background-color: inherit
       margin: 0
       padding: 0
-
-      &:hover,
-      &:active
-        background-color: inherit
-
-      &:focus
-        outline: none
-        box-shadow: none
 
     &::after
       content: ""
