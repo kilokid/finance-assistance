@@ -181,10 +181,14 @@ ul {
         margin-left: 25px; } }
     @media (max-width: 885px) {
       .menu__button {
+        margin: 0 0 0 25px;
+        padding: 0;
         border: none;
-        background-color: inherit;
-        margin: 0;
-        padding: 0; } }
+        border-radius: 0;
+        background-color: inherit; }
+        .menu__button:hover, .menu__button:active {
+          border-bottom: 3px solid #23A6F0;
+          background-color: #F7F7F7; } }
     .menu__button::after {
       content: "";
       display: inline-block;
@@ -201,8 +205,7 @@ ul {
     vertical-align: text-bottom; }
     @media (max-width: 885px) {
       .menu__register {
-        margin-right: 0;
-        margin-left: 25px; }
+        margin-right: 0; }
         .menu__register--gray {
           fill: #737373; } }
   .menu__burger {
