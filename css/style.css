@@ -130,7 +130,7 @@ ul {
           right: 0;
           left: 0;
           z-index: 1;
-          padding: 50px 0px 100px;
+          padding: 50px 0px 120px;
           background-color: #F7F7F7; } }
   .menu__item:not(:last-child) {
     margin-right: 21px; }
@@ -147,6 +147,9 @@ ul {
         font-weight: normal;
         font-size: 30px;
         line-height: 45px; } }
+  .menu__user {
+    display: flex;
+    align-items: center; }
   .menu__entrance {
     border: none;
     background-color: inherit;
