@@ -55,6 +55,9 @@
         padding: 50px 0px 120px
         background-color: $border-menu
 
+    @media (max-width: 350px)
+      padding-bottom: 170px
+
   &__item
     &:not(:last-child)
       margin-right: 21px
@@ -77,47 +80,41 @@
     display: flex
     align-items: center
 
-  &__entrance
-    border: none
-    background-color: inherit
-    font-weight: bold
-    font-size: 14px
-    line-height: 22px
-    letter-spacing: 0.2px
-    color: $blue
+  &__login
+    display: flex
     cursor: pointer
 
-    &:hover,
-    &:active
-      border-bottom: 1px solid $blue
-
-  &__login
-    margin-right: 12px
-    vertical-align: text-bottom
-
     @media (max-width: 885px)
-      margin: 0
       &--gray
         fill: $grey
 
-  &__button
+  &__entrance
+    margin-left: 12px
+    color: $blue
+
+    @media (max-width: 885px)
+      margin: 0
+
+  &__register
+    display: flex
+    align-items: center
     margin-left: 45px
     padding: 15px 25px
     background-color: $blue
     border-radius: 5px
-    color: $white
     cursor: pointer
 
     &:hover,
     &:active
       box-shadow: none
       background-color: $dark
+      color: $white
 
     @media (max-width: 920px)
       margin-left: 25px
 
     @media (max-width: 885px)
-      margin: 0 0 0 25px
+      margin-left: 30px
       padding: 0
       border: none
       border-radius: 0
@@ -125,8 +122,14 @@
 
       &:hover,
       &:active
-        border-bottom: 3px solid $blue
-        background-color: $border-menu
+        background-color: inherit
+
+      &--gray
+        fill: $grey
+
+  &__button
+    margin-left: 12px
+    color: $white
 
     &::after
       content: ""
@@ -137,17 +140,12 @@
       height: 10px
       background-repeat: no-repeat
 
-      @media (max-width: 885px)
-        display: none
-
-  &__register
-    margin-right: 12px
-    vertical-align: text-bottom
+    &:hover,
+    &:active
+      box-shadow: none
 
     @media (max-width: 885px)
-      margin-right: 0
-      &--gray
-        fill: $grey
+      display: none
 
   &__burger
     display: none
@@ -160,5 +158,14 @@
       margin-left: 25px
 
   &__text
+    &-register
+      color: $white
+      &:hover,
+      &:active
+        color: $white
+
+      &:focus
+        color: $white
+
     @media (max-width: 885px)
       display: none
