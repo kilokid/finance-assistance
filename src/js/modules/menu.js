@@ -1,15 +1,17 @@
 export const menu = () => {
-  const btn = document.querySelector('.menu__burger');
-  const menuElem = document.querySelector('.menu__links');
-
-  btn.addEventListener('click', () => {
-    menuElem.classList.toggle('menu__links--active');
-  });
+  const menuButton = document.querySelector('.menu__burger');
+  const menuList = document.querySelector('.menu__list');
 
   const closeMenu = () => {
-    menuElem.classList.remove('menu__links--active');
+    menuList.classList.remove('menu__list--active');
   };
-  // Сделал твоим способом закрытие меню по клику вне его :)
+
+  menuButton.addEventListener('click', () => {
+    let expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+    menuButton.setAttribute('aria-expanded', !expanded);
+    menuList.classList.toggle('menu__list--active');
+  });
+
   document.addEventListener('click', (event) => {
     const target = event.target;
 

@@ -15,7 +15,7 @@
   <header class="menu container">
     <span class="menu__logo">BrandName</span>
     <nav class="menu__nav">
-      <ul class="menu__links">
+      <ul class="menu__list" id="menu__list">
         <li class="menu__item">
           <a class="menu__link" href="#">Home</a>
         </li>
@@ -47,7 +47,7 @@
           </a>
         </li>
       </ul>
-      <button class="menu__burger" href="#">
+      <button class="menu__burger" type="button" aria-expanded="false" aria-controls="menu__links">
         <img src="img/burger-menu.svg" width="22px" height="16px" alt="Menu">
       </button>
     </nav>
