@@ -112,16 +112,16 @@ ul {
     @media (max-width: 885px) {
       .menu__nav {
         justify-content: flex-end; } }
-  .menu__links {
+  .menu__list {
     display: flex;
     flex-flow: wrap;
     padding: 0 15px; }
     @media (max-width: 885px) {
-      .menu__links {
+      .menu__list {
         display: none;
         flex-direction: column;
         text-align: center; }
-        .menu__links--active {
+        .menu__list--active {
           position: absolute;
           display: flex;
           flex-direction: column;
@@ -132,6 +132,9 @@ ul {
           z-index: 1;
           padding: 50px 0px 120px;
           background-color: #F7F7F7; } }
+    @media (max-width: 350px) {
+      .menu__list {
+        padding-bottom: 170px; } }
   .menu__item:not(:last-child) {
     margin-right: 21px; }
     @media (max-width: 885px) {
@@ -150,48 +153,47 @@ ul {
   .menu__user {
     display: flex;
     align-items: center; }
-  .menu__entrance {
-    border: none;
-    background-color: inherit;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.2px;
-    color: #23A6F0;
-    cursor: pointer; }
-    .menu__entrance:hover, .menu__entrance:active {
-      border-bottom: 1px solid #23A6F0; }
   .menu__login {
-    margin-right: 12px;
-    vertical-align: text-bottom; }
+    display: flex;
+    cursor: pointer; }
     @media (max-width: 885px) {
-      .menu__login {
-        margin: 0; }
-        .menu__login--gray {
-          fill: #737373; } }
-  .menu__button {
+      .menu__login--gray {
+        fill: #737373; } }
+  .menu__entrance {
+    margin-left: 12px;
+    color: #23A6F0; }
+    @media (max-width: 885px) {
+      .menu__entrance {
+        margin: 0; } }
+  .menu__register {
+    display: flex;
+    align-items: center;
     margin-left: 45px;
     padding: 15px 25px;
     background-color: #23A6F0;
     border-radius: 5px;
-    color: #FFFFFF;
     cursor: pointer; }
-    .menu__button:hover, .menu__button:active {
+    .menu__register:hover, .menu__register:active {
       box-shadow: none;
-      background-color: #252B42; }
+      background-color: #252B42;
+      color: #FFFFFF; }
     @media (max-width: 920px) {
-      .menu__button {
+      .menu__register {
         margin-left: 25px; } }
     @media (max-width: 885px) {
-      .menu__button {
-        margin: 0 0 0 25px;
+      .menu__register {
+        margin-left: 30px;
         padding: 0;
         border: none;
         border-radius: 0;
         background-color: inherit; }
-        .menu__button:hover, .menu__button:active {
-          border-bottom: 3px solid #23A6F0;
-          background-color: #F7F7F7; } }
+        .menu__register:hover, .menu__register:active {
+          background-color: inherit; }
+        .menu__register--gray {
+          fill: #737373; } }
+  .menu__button {
+    margin-left: 12px;
+    color: #FFFFFF; }
     .menu__button::after {
       content: "";
       display: inline-block;
@@ -200,17 +202,11 @@ ul {
       width: 12px;
       height: 10px;
       background-repeat: no-repeat; }
-      @media (max-width: 885px) {
-        .menu__button::after {
-          display: none; } }
-  .menu__register {
-    margin-right: 12px;
-    vertical-align: text-bottom; }
+    .menu__button:hover, .menu__button:active {
+      box-shadow: none; }
     @media (max-width: 885px) {
-      .menu__register {
-        margin-right: 0; }
-        .menu__register--gray {
-          fill: #737373; } }
+      .menu__button {
+        display: none; } }
   .menu__burger {
     display: none;
     border: none;
@@ -220,6 +216,12 @@ ul {
       .menu__burger {
         display: flex;
         margin-left: 25px; } }
+  .menu__text-register {
+    color: #FFFFFF; }
+    .menu__text-register:hover, .menu__text-register:active {
+      color: #FFFFFF; }
+    .menu__text-register:focus {
+      color: #FFFFFF; }
   @media (max-width: 885px) {
     .menu__text {
       display: none; } }
