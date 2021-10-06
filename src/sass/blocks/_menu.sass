@@ -82,6 +82,8 @@
 
   &__login
     display: flex
+    align-items: center
+    padding: 15px 0
     cursor: pointer
 
     @media (max-width: 885px)
@@ -104,11 +106,14 @@
     border-radius: 5px
     cursor: pointer
 
+    &:focus
+      box-shadow: 100px 10px 10px 10px red
     &:hover,
     &:active
       box-shadow: none
       background-color: $dark
       color: $white
+
 
     @media (max-width: 920px)
       margin-left: 25px
@@ -142,6 +147,9 @@
 
     &:hover,
     &:active
+      box-shadow: none
+
+    &:focus
       box-shadow: none
 
     @media (max-width: 885px)
