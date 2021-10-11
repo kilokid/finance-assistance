@@ -73,9 +73,10 @@ body {
 a {
   text-decoration: none; }
   a:hover, a:active {
-    box-shadow: 0 2px 0 0 #23A6F0; }
-  a:focus {
+    box-shadow: 0 2px 0 0 #23A6F0;
     color: #252B42; }
+  a:focus {
+    box-shadow: 0 2px 0 0 #252B42; }
 
 ul {
   list-style-type: none; }
@@ -155,6 +156,8 @@ ul {
     align-items: center; }
   .menu__login {
     display: flex;
+    align-items: center;
+    padding: 15px 0;
     cursor: pointer; }
     @media (max-width: 885px) {
       .menu__login--gray {
@@ -166,32 +169,24 @@ ul {
       .menu__entrance {
         margin: 0; } }
   .menu__register {
-    display: flex;
-    align-items: center;
-    margin-left: 45px;
-    padding: 15px 25px;
-    background-color: #23A6F0;
-    border-radius: 5px;
-    cursor: pointer; }
-    .menu__register:hover, .menu__register:active {
-      box-shadow: none;
-      background-color: #252B42;
-      color: #FFFFFF; }
+    margin-left: 45px; }
     @media (max-width: 920px) {
       .menu__register {
         margin-left: 25px; } }
     @media (max-width: 885px) {
       .menu__register {
         margin-left: 30px;
-        padding: 0;
         border: none;
         border-radius: 0;
-        background-color: inherit; }
-        .menu__register:hover, .menu__register:active {
-          background-color: inherit; }
-        .menu__register--gray {
-          fill: #737373; } }
+        background-color: inherit;
+        fill: #737373; } }
   .menu__button {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #23A6F0;
+    border-radius: 5px;
+    cursor: pointer;
     margin-left: 12px;
     color: #FFFFFF; }
     .menu__button::after {
@@ -202,11 +197,26 @@ ul {
       width: 12px;
       height: 10px;
       background-repeat: no-repeat; }
+      @media (max-width: 885px) {
+        .menu__button::after {
+          display: none; } }
     .menu__button:hover, .menu__button:active {
+      background-color: #252B42;
       box-shadow: none; }
+    .menu__button:focus {
+      box-shadow: 0 0 0 3px lightskyblue; }
     @media (max-width: 885px) {
       .menu__button {
-        display: none; } }
+        padding: 15px 0;
+        margin: 0;
+        background-color: inherit;
+        border-radius: 0px;
+        cursor: pointer; }
+        .menu__button:hover, .menu__button:active {
+          background-color: inherit;
+          box-shadow: none; }
+        .menu__button:focus {
+          box-shadow: none; } }
   .menu__burger {
     display: none;
     border: none;
@@ -215,8 +225,10 @@ ul {
     @media (max-width: 885px) {
       .menu__burger {
         display: flex;
-        margin-left: 25px; } }
+        margin-left: 25px;
+        padding: 15px 0; } }
   .menu__text-register {
+    margin-left: 12px;
     color: #FFFFFF; }
     .menu__text-register:hover, .menu__text-register:active {
       color: #FFFFFF; }
