@@ -81,21 +81,35 @@
     align-items: center
 
   &__login
-    display: flex
-    align-items: center
-    padding: 15px 0
-    cursor: pointer
-
     @media (max-width: 885px)
       &--gray
         fill: $grey
 
   &__entrance
+    display: flex
+    align-items: center
     margin-left: 12px
+    padding: 15px 0
     color: $blue
+
+    &:hover,
+    &:active
+      background-color: none
+      box-shadow: none
+
+    &:focus
+      box-shadow: none
 
     @media (max-width: 885px)
       margin: 0
+
+      &:hover,
+      &:active
+        background-color: none
+        box-shadow: none
+
+      &:focus
+        box-shadow: none
 
   &__register
     margin-left: 45px
@@ -167,6 +181,8 @@
       padding: 15px 0
 
   &__text
+    &-login
+      margin-left: 12px
     &-register
       margin-left: 12px
       color: $white
@@ -178,4 +194,8 @@
         color: $white
 
     @media (max-width: 885px)
-      display: none
+      position: absolute
+      clip: rect(0 0 0 0)
+      width: 1px
+      height: 1px
+      margin: -1px
