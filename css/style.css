@@ -160,8 +160,7 @@ ul {
   .menu__entrance {
     display: flex;
     align-items: center;
-    margin-left: 12px;
-    padding: 15px 0;
+    padding: 15px;
     color: #23A6F0; }
     .menu__entrance:hover, .menu__entrance:active {
       background-color: none;
@@ -169,13 +168,11 @@ ul {
     .menu__entrance:focus {
       box-shadow: none; }
     @media (max-width: 885px) {
-      .menu__entrance {
-        margin: 0; }
-        .menu__entrance:hover, .menu__entrance:active {
-          background-color: none;
-          box-shadow: none; }
-        .menu__entrance:focus {
-          box-shadow: none; } }
+      .menu__entrance:hover, .menu__entrance:active {
+        background-color: none;
+        box-shadow: none; }
+      .menu__entrance:focus {
+        box-shadow: none; } }
   .menu__register {
     margin-left: 45px; }
     @media (max-width: 920px) {
@@ -183,7 +180,7 @@ ul {
         margin-left: 25px; } }
     @media (max-width: 885px) {
       .menu__register {
-        margin-left: 30px;
+        margin: 0;
         border: none;
         border-radius: 0;
         background-color: inherit;
@@ -195,7 +192,6 @@ ul {
     background-color: #23A6F0;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 12px;
     color: #FFFFFF; }
     .menu__button::after {
       content: "";
@@ -215,8 +211,6 @@ ul {
       box-shadow: 0 0 0 3px lightskyblue; }
     @media (max-width: 885px) {
       .menu__button {
-        padding: 15px 0;
-        margin: 0;
         background-color: inherit;
         border-radius: 0px;
         cursor: pointer; }
@@ -233,8 +227,7 @@ ul {
     @media (max-width: 885px) {
       .menu__burger {
         display: flex;
-        margin-left: 25px;
-        padding: 15px 0; } }
+        padding: 15px 15px; } }
   .menu__text-login {
     margin-left: 12px; }
   .menu__text-register {
