@@ -1,4 +1,5 @@
 export const menu = () => {
+  'use strict';
   const menuButton = document.querySelector('.menu__burger');
   const menuList = document.querySelector('.menu__list');
 
@@ -18,6 +19,9 @@ export const menu = () => {
     if (target.closest('.menu')) {
       return;
     }
+
+    let expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+    menuButton.setAttribute('aria-expanded', !expanded);
 
     closeMenu();
   });
