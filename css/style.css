@@ -160,7 +160,7 @@ ul {
   .menu__entrance {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 15px 10px;
     color: #23A6F0; }
     .menu__entrance:hover, .menu__entrance:active {
       background-color: none;
@@ -188,7 +188,7 @@ ul {
   .menu__button {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 15px 10px;
     background-color: #23A6F0;
     border-radius: 5px;
     cursor: pointer;
@@ -222,12 +222,12 @@ ul {
   .menu__burger {
     display: none;
     border: none;
-    background-color: #FAFAFA;
+    background-color: #F7F7F7;
     cursor: pointer; }
     @media (max-width: 885px) {
       .menu__burger {
         display: flex;
-        padding: 15px 15px; } }
+        padding: 15px 10px; } }
   .menu__text-login {
     margin-left: 12px; }
   .menu__text-register {
