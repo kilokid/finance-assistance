@@ -40,20 +40,18 @@
 
     @media (max-width: 885px)
       display: none
+      position: absolute
       flex-direction: column
-      text-align: center
+      align-items: center
+      top: 100%
+      right: 0
+      left: 0
+      z-index: 1
+      padding: 50px 0px 120px
+      background-color: $border-menu
 
       &--active
-        position: absolute
         display: flex
-        flex-direction: column
-        align-items: center
-        top: 100%
-        right: 0
-        left: 0
-        z-index: 1
-        padding: 50px 0px 120px
-        background-color: $border-menu
 
     @media (max-width: 350px)
       padding-bottom: 170px
@@ -76,94 +74,6 @@
       font-size: 30px
       line-height: 45px
 
-  &__user
-    display: flex
-    align-items: center
-
-  &__login
-    @media (max-width: 885px)
-      &--gray
-        fill: $grey
-
-  &__entrance
-    display: flex
-    align-items: center
-    padding: 15px 10px
-    color: $blue
-
-    &:hover,
-    &:active
-      background-color: none
-      box-shadow: none
-
-    &:focus
-      box-shadow: none
-
-    @media (max-width: 885px)
-
-      &:hover,
-      &:active
-        background-color: none
-        box-shadow: none
-
-      &:focus
-        box-shadow: none
-
-  &__register
-    margin-left: 45px
-
-    @media (max-width: 920px)
-      margin-left: 25px
-
-    @media (max-width: 885px)
-      margin: 0
-      border: none
-      border-radius: 0
-      background-color: inherit
-      fill: $grey
-
-  &__button
-    display: flex
-    align-items: center
-    padding: 15px 10px
-    background-color: $blue
-    border-radius: 5px
-    cursor: pointer
-    color: $white
-
-    &::after
-      content: ""
-      display: inline-block
-      margin-left: 15px
-      background-image: url(../img/arrow.svg)
-      width: 12px
-      height: 10px
-      background-repeat: no-repeat
-
-      @media (max-width: 885px)
-        display: none
-
-    &:hover,
-    &:active
-      background-color: $dark
-      box-shadow: none
-
-    &:focus
-      box-shadow: 0 0 0 3px lightskyblue
-
-    @media (max-width: 885px)
-      background-color: inherit
-      border-radius: 0px
-      cursor: pointer
-
-      &:hover,
-      &:active
-        background-color: inherit
-        box-shadow: none
-
-      &:focus
-        box-shadow: none
-
   &__burger
     display: none
     border: none
@@ -171,25 +81,5 @@
     cursor: pointer
 
     @media (max-width: 885px)
-      display: flex
+      display: block
       padding: 15px 10px
-
-  &__text
-    &-login
-      margin-left: 12px
-    &-register
-      margin-left: 12px
-      color: $white
-      &:hover,
-      &:active
-        color: $white
-
-      &:focus
-        color: $white
-
-    @media (max-width: 885px)
-      position: absolute
-      clip: rect(0 0 0 0)
-      width: 1px
-      height: 1px
-      margin: -1px

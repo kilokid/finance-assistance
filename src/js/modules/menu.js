@@ -1,19 +1,10 @@
 export const menu = () => {
-  'use strict';
   const menuButton = document.querySelector('.menu__burger');
   const menuList = document.querySelector('.menu__list');
 
-  const closeMenu = () => {
-    menuList.classList.remove('menu__list--active');
-  };
-
-  const ariaAttribute = () => {
-    let expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
-    menuButton.setAttribute('aria-expanded', !expanded);
-  };
-
   menuButton.addEventListener('click', () => {
-    ariaAttribute();
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', !isExpanded);
     menuList.classList.toggle('menu__list--active');
   });
 
@@ -24,6 +15,6 @@ export const menu = () => {
       return;
     }
     menuButton.setAttribute('aria-expanded', false);
-    closeMenu();
+    menuList.classList.remove('menu__list--active');
   });
 };
