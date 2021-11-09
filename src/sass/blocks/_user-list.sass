@@ -6,32 +6,35 @@
     margin-left: 45px
 
     @media (max-width: 885px)
-      margin-left: 15px
+      margin-left: 10px
 
-    @media (max-width: 375px)
-      margin-left: 5px
-
-  &__link
+  &__button
     display: flex
     align-items: center
-    color: $blue
+    padding: 15px 10px
+    border-radius: 5px
 
     &:hover,
     &:active
-      background-color: none
+      color: $white
+      background-color: $dark
       box-shadow: none
 
     &:focus
-      box-shadow: none
+      box-shadow: 0 0 0 3px lightskyblue
 
     @media (max-width: 885px)
-      padding: 15px 10px
+      background-color: inherit
 
-    &--btn
-      padding: 15px 10px
-      background-color: $blue
-      border-radius: 5px
+      &:hover,
+      &:active
+        background-color: inherit
+        box-shadow: none
 
+      &:focus
+        box-shadow: none
+
+    &--arrow
       &::after
         content: ""
         display: inline-block
@@ -44,38 +47,31 @@
         @media (max-width: 885px)
           display: none
 
+    &--nobg
+      padding: 0
+      color: $blue
+      background-color: inherit
+
       &:hover,
       &:active
-        background-color: $dark
+        color: $dark
+        background-color: inherit
         box-shadow: none
 
       &:focus
-        box-shadow: 0 0 0 3px lightskyblue
+        box-shadow: none
 
       @media (max-width: 885px)
-        background-color: inherit
-
-        &:hover,
-        &:active
-          background-color: inherit
-          box-shadow: none
-
-        &:focus
-          box-shadow: none
+        padding: 15px 10px
 
   &__icon
+    fill: currentColor
+
     @media (max-width: 885px)
       fill: $grey
 
   &__text
     margin-left: 12px
-    font-weight: 700
-    font-size: 14px
-    line-height: 22px
-    letter-spacing: 0.2px
-
-    &--white
-      color: $white
 
     @media (max-width: 885px)
       @include visually-hidden
