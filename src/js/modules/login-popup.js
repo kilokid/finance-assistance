@@ -1,5 +1,5 @@
 export const loginPopup = () => {
-  const buttonLogin = document.querySelector('.menu__entrance');
+  const buttonLogin = document.querySelector('.user-list__login');
   const modal = document.querySelector('.modal');
 
   const openModal = () => {
