@@ -1,22 +1,20 @@
 export const menu = () => {
-  const btn = document.querySelector('.menu__burger');
-  const menuElem = document.querySelector('.menu__links');
+  const menuButton = document.querySelector('.menu__burger');
+  const menuList = document.querySelector('.menu__list');
 
-  btn.addEventListener('click', () => {
-    menuElem.classList.toggle('menu__links--active');
+  menuButton.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', !isExpanded);
+    menuList.classList.toggle('menu__list--active');
   });
 
-  const closeMenu = () => {
-    menuElem.classList.remove('menu__links--active');
-  };
-  // Сделал твоим способом закрытие меню по клику вне его :)
   document.addEventListener('click', (event) => {
     const target = event.target;
 
     if (target.closest('.menu')) {
       return;
     }
-
-    closeMenu();
+    menuButton.setAttribute('aria-expanded', false);
+    menuList.classList.remove('menu__list--active');
   });
 };

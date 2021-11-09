@@ -1,0 +1,77 @@
+.user-list
+  display: flex
+  align-items: center
+
+  &__register
+    margin-left: 45px
+
+    @media (max-width: 885px)
+      margin-left: 10px
+
+  &__button
+    display: flex
+    align-items: center
+    padding: 15px 10px
+    border-radius: 5px
+
+    &:hover,
+    &:active
+      color: $white
+      background-color: $dark
+      box-shadow: none
+
+    &:focus
+      box-shadow: 0 0 0 3px lightskyblue
+
+    @media (max-width: 885px)
+      background-color: inherit
+
+      &:hover,
+      &:active
+        background-color: inherit
+        box-shadow: none
+
+      &:focus
+        box-shadow: none
+
+    &--arrow
+      &::after
+        content: ""
+        display: inline-block
+        margin-left: 15px
+        background-image: url(../img/arrow.svg)
+        width: 12px
+        height: 10px
+        background-repeat: no-repeat
+
+        @media (max-width: 885px)
+          display: none
+
+    &--nobg
+      padding: 0
+      color: $blue
+      background-color: inherit
+
+      &:hover,
+      &:active
+        color: $dark
+        background-color: inherit
+        box-shadow: none
+
+      &:focus
+        box-shadow: none
+
+      @media (max-width: 885px)
+        padding: 15px 10px
+
+  &__icon
+    fill: currentColor
+
+    @media (max-width: 885px)
+      fill: $grey
+
+  &__text
+    margin-left: 12px
+
+    @media (max-width: 885px)
+      @include visually-hidden

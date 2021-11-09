@@ -13,42 +13,44 @@
 <body>
   <!-- New menu-->
   <header class="menu container">
-      <span class="menu__logo">BrandName</span>
-        <nav class="menu__nav">
-          <ul class="menu__links">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Home</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Product</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Pricing</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Contact</a>
-            </li>
-          </ul>
-          <ul class="menu__user">
-            <li>
-              <a class="menu__search" href="#">
-                <img src="img/search.svg" width="24px" height="24px" alt="Search">
-              </a>
-            </li>
-            <li>
-              <a class="menu__basket" href="#">
-                <img src="img/basket.svg" width="24px" height="24px" alt="Basket">
-              </a>
-            </li>
-          </ul>
-          <button class="menu__burger" href="#">
-            <img src="img/burger-menu.svg" width="22px" height="16px" alt="Menu">
-          </button>
-        </nav>
-        <div class="menu__login">
-          <a href="#" class="menu__entrance">Login</a>
-          <button class="button button--rectangle menu__button" type="button">Become a member</button>
-        </div>
+    <span class="menu__logo">BrandName</span>
+    <nav class="menu__nav">
+      <ul class="menu__list" id="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Home</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Product</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Pricing</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Contact</a>
+        </li>
+      </ul>
+      <ul class="user-list">
+        <li class="user-list__login">
+          <a class="button user-list__button user-list__button--nobg" href="#">
+            <svg class="user-list__icon" width="20" height="18" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 4L7.6 5.4L10.2 8H0V10H10.2L7.6 12.6L9 14L14 9L9 4ZM18 16H10V18H18C19.1 18 20 17.1 20 16V2C20 0.9 19.1 0 18 0H10V2H18V16Z"/>
+            </svg>
+            <span class="user-list__text user-list__text--blue">Login</span>
+          </a>
+        </li>
+        <li class="user-list__register">
+          <a class="button user-list__button user-list__button--arrow" href="#">
+            <svg class="user-list__icon" width="19" height="17" viewBox="0 0 19 17" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 8C10.21 8 12 6.21 12 4C12 1.79 10.21 0 8 0C5.79 0 4 1.79 4 4C4 6.21 5.79 8 8 8ZM8 2C9.1 2 10 2.9 10 4C10 5.1 9.1 6 8 6C6.9 6 6 5.1 6 4C6 2.9 6.9 2 8 2ZM2 14C2.2 13.37 4.57 12.32 6.96 12.06L9 10.06C8.61 10.02 8.32 10 8 10C5.33 10 0 11.34 0 14V16H9L7 14H2ZM17.6 8.5L12.47 13.67L10.4 11.59L9 13L12.47 16.5L19 9.91L17.6 8.5Z"/>
+            </svg>
+            <span class="user-list__text">Become a member</span>
+          </a>
+        </li>
+      </ul>
+      <button class="menu__burger" type="button" aria-expanded="false" aria-controls="menu__list">
+        <img src="img/burger-menu.svg" width="22px" height="16px" alt="Menu">
+      </button>
+    </nav>
   </header>
   <!-- End new menu -->
   <main>
@@ -59,8 +61,8 @@
               <h1 class="first-screen__title">Your Financial<br> Assistance </h1>
               <p class="first-screen__subtitle">We know how large objects will act, but things on a small scale.</p>
               <div class="first-screen__buttons">
-                <a href="#" class="button">Get Quote Now</a>
-                <a href="#" class="button first-screen__button button--white">Learn More</a>
+                <button class="button">Get Quote Now</button>
+                <button class="button first-screen__button button--white">Learn More</button>
               </div>
             </div>
             <div class="first-screen__img">
@@ -169,22 +171,22 @@
             <div class="news__card news__card--1">
               <p class="news__topic">Tax Management</p>
               <p class="news__subtopic">Life Tips From Top Ten Adventure Travelers</p>
-              <a class="button news__button" href="#">View Project</a>
+              <button class="button news__button" href="#">View Project</button>
             </div>
             <div class="news__card news__card--2">
               <p class="news__topic">Tax Management</p>
               <p class="news__subtopic">Life Tips From Top Ten Adventure Travelers</p>
-              <a class="button news__button" href="#">View Project</a>
+              <button class="button news__button" href="#">View Project</button>
             </div>
             <div class="news__card news__card--3">
               <p class="news__topic">Tax Management</p>
               <p class="news__subtopic">Life Tips From Top Ten Adventure Travelers</p>
-              <a class="button news__button" href="#">View Project</a>
+              <button class="button news__button" href="#">View Project</button>
             </div>
             <div class="news__card news__card--4">
               <p class="news__topic">Tax Management</p>
               <p class="news__subtopic">Life Tips From Top Ten Adventure Travelers</p>
-              <a class="button news__button" href="#">View Project</a>
+              <button class="button news__button" href="#">View Project</button>
             </div>
           </div>
         </section>
@@ -203,7 +205,7 @@
                 <span class="pricing-card__subscription">Per Month</span>
               </div>
               <div class="pricing-card__mobile-wrapper">
-                <a href="#" class="button button--rectangle pricing-card__button">Try for free</a>
+                <button href="#" class="button button--rectangle pricing-card__button">Try for free</button>
                 <ul class="pricing-card__features">
                   <li class="pricing-card__features-item">
                     <span class="pricing-card__cheked"></span>
@@ -238,7 +240,7 @@
                 <span class="pricing-card__subscription">Per Month</span>
               </div>
               <div class="pricing-card__mobile-wrapper">
-                <a href="#" class="button button--rectangle pricing-card__button">Try for free</a>
+                <button href="#" class="button button--rectangle pricing-card__button">Try for free</button>
                 <ul class="pricing-card__features">
                   <li class="pricing-card__features-item">
                     <span class="pricing-card__cheked"></span>
@@ -272,7 +274,7 @@
                 <span class="pricing-card__subscription">Per Month</span>
               </div>
               <div class="pricing-card__mobile-wrapper">
-                <a href="#" class="button button--rectangle pricing-card__button">Try for free</a>
+                <button href="#" class="button button--rectangle pricing-card__button">Try for free</button>
                 <ul class="pricing-card__features">
                   <li class="pricing-card__features-item">
                     <span class="pricing-card__cheked"></span>
@@ -305,7 +307,7 @@
             </div>
             <form class="get-touch__border">
               <input class="input get-touch__email" type="email" name="email" placeholder="Your Email" required>
-              <input class="input get-touch__button" type="submit" value="Subscribe">
+              <button class="input get-touch__button" type="submit">Subscribe</button>
             </form>
           </div>
         </div>
@@ -388,4 +390,3 @@
   <script src="js/script.min.js"></script>
 </body>
 </html>
-
