@@ -16,7 +16,7 @@ export const loginPopup = () => {
 
   modal.addEventListener('click', (event) => {
     const target = event.target;
-    console.log(target);
+
     if (target.classList.contains('modal__overlay') || target.classList.contains('modal__close')) {
         closeModal();
     }
