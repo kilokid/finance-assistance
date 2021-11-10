@@ -4,12 +4,14 @@ export const loginPopup = () => {
 
   const openModal = () => {
     modal.classList.remove('modal--hidden');
+    document.body.style.paddingRight = '17px';
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     modal.classList.add('modal--hidden');
-    document.body.style.overflow = '';
+    document.body.style.paddingRight = '0';
+    document.body.style.overflow = 'scroll';
   };
 
   buttonLogin.addEventListener('click', openModal);
@@ -22,4 +24,3 @@ export const loginPopup = () => {
     }
   });
 };
-

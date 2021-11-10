@@ -1,17 +1,15 @@
 .modal
-  position: fixed
   top: 0
   left: 0
   right: 0
   bottom: 0
-  z-index: 1
   font-weight: 500
   font-size: 14px
   line-height: 20px
   letter-spacing: 0.2px
 
   &__overlay
-    position: absolute
+    position: fixed
     top: 0
     left: 0
     right: 0
@@ -23,7 +21,6 @@
 
   &-wrapper
     position: fixed
-    top: 50%
     left: 50%
     display: flex
     flex-direction: column
@@ -32,10 +29,17 @@
     width: 100%
     padding: 65px 20px 44px
     transform: translate(-50%, -50%)
+    animation: popupAnim 500ms linear forwards
     background-color: $white
     border: none
     border-radius: 5px
     z-index: 2
+
+    @keyframes popupAnim
+      from
+        top: -50%
+      to
+        top: 50%
 
     @media (max-width: 480px)
       max-width: 320px
