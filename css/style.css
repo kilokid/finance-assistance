@@ -428,6 +428,19 @@ ul {
       color: #23A6F0; }
     .reviews-card__author-job {
       color: #252B42; }
+  .reviews__slider-btn {
+    position: absolute;
+    background: transparent;
+    cursor: pointer;
+    padding: 15px 15px;
+    border: none;
+    fill: #23A6F0; }
+  .reviews__next {
+    top: 62%;
+    right: 15px; }
+  .reviews__prev {
+    top: 62%;
+    left: 15px; }
 
 .news {
   padding-top: 112px;
