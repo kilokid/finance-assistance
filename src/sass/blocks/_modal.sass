@@ -1,0 +1,100 @@
+.modal
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  font-weight: 500
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.2px
+
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.3)
+    width: 100%
+    height: 100%
+    z-index: 2
+
+  &-wrapper
+    position: fixed
+    left: 50%
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 430px
+    width: 100%
+    padding: 65px 20px 44px
+    transform: translate(-50%, -50%)
+    animation: popupAnim 500ms linear forwards
+    background-color: $white
+    border: none
+    border-radius: 5px
+    z-index: 2
+
+    @keyframes popupAnim
+      from
+        top: -50%
+      to
+        top: 50%
+
+    @media (max-width: 480px)
+      max-width: 320px
+
+    @media (max-width: 367px)
+      max-width: 300px
+
+  &__close
+    position: absolute
+    display: block
+    width: 24px
+    height: 24px
+    top: 20px
+    right: 20px
+    border: none
+    background-color: $white
+    cursor: pointer
+
+  &__title
+    margin-bottom: 40px
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    letter-spacing: 0.1px
+    color: $dark
+
+    @media (max-width: 367px)
+      text-align: center
+
+  &__form
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  &__label
+    margin-bottom: 20px
+    display: flex
+    flex-direction: column
+
+    &:nth-last-child(2)
+      margin-bottom: 40px
+
+  &__name
+    color: $grey
+    margin-left: 20px
+
+  &__input
+    margin-top: 7px
+    padding: 15px 20px
+    border: 1px solid $border-gray
+    background-color: $bg-gray
+    border-radius: 5px
+    font-weight: normal
+    line-height: 28px
+    color: $grey
+
+  &--hidden
+    display: none
